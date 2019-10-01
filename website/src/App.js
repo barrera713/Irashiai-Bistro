@@ -1,16 +1,17 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import history from './history';
 import './App.css';
 import { Home } from './Components/Home';
 import { NavBar } from './Components/NavBar';
-import { Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <div>
-    <Router>
+    <Router histroy={history}>
       <NavBar />
       <Switch>
-        <Route exact path='irashiai2' component={Home} />
+        <Route exact path='/' component={Home} />
       </Switch>
     </Router>
     </div>
