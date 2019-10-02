@@ -1,4 +1,5 @@
 import React from 'react';
+import Slider from './Slider';
 
 
 
@@ -9,11 +10,7 @@ class Home extends React.Component {
         
         return(
             <div>
-            <section className="section-a">
-                <div>
-                    <h1>Section A</h1>
-                </div>
-            </section>
+                <Slider />
             <section className="section-b">
                 <h1>Section B</h1>
                 <div>

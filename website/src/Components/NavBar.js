@@ -20,13 +20,13 @@ class NavBar extends React.Component {
                 <div className="social-media-container">
                     <ul className="social-links">
                         <li>
-                            <a href="https://www.facebook.com/Irashiai2/" className="fa fa-facebook"></a>
+                            <a href="https://www.facebook.com/Irashiai2/" className="fa fa-facebook"> </a>
                         </li>
                         <li>
-                            <a href="https://www.yelp.com/biz/irashiai-2-japanese-bistro-palm-bay" className="fa fa-yelp"></a>
+                            <a href="https://www.yelp.com/biz/irashiai-2-japanese-bistro-palm-bay" className="fa fa-yelp"> </a>
                         </li>
                         <li>
-                            <a href="mailto: irashiaibistro@gmail.com" className="glyphicon glyphicon-envelope"></a>
+                            <a href="mailto: irashiaibistro@gmail.com" className="glyphicon glyphicon-envelope"> </a>
                         </li>
                     </ul>
                 </div>
