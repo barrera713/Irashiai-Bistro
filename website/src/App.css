@@ -4,8 +4,15 @@
   box-sizing: border-box;
 }
 
-body {
-  text-align: center;
+
+body { 
+  width: 100%; 
+  text-align: center; 
+}
+
+.web-bg {
+  background-image: url('/background.jpg');
+  background-size: cover;
 }
 
 
@@ -15,6 +22,8 @@ body {
   height: 350px;
   background-color: black;
   justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .logo img {
@@ -84,20 +93,37 @@ body {
   color: white
 }
 
-.img-carousel img{
-  object-fit: cover;
+
+.gallery-title h2 {
+  letter-spacing: 14px;
+  font-size: 28px;
+  font-family: 'Alice', serif;
+  text-shadow: grey;
+  margin: 10px 0;
 }
 
+.section-a {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.img-carousel img {
+  object-fit: cover;
+  width: 100%;
+}
+
+
 .section-b {
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
-  background-color:  #FFE3E0;
   font-size: 1.1em;
   letter-spacing: 1px;
 }
 
 @media (min-width: 600px) {
   body {
-    background: #FFE3E0;
+    background: white;
   }
 }
 

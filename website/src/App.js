@@ -7,7 +7,7 @@ import { NavBar } from './Components/NavBar';
 
 function App() {
   return (
-    <div>
+    <div className="web-bg">
     <Router histroy={history}>
       <NavBar />
       <Switch>
