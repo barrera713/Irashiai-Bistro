@@ -49,13 +49,29 @@ body {
   color: white;
 }
 
-.social-media-container {
-  background: white;
-  display: flex;
+.social-media-links {
+  position: absolute;
+  margin-top: 130px;
 }
 
-.social-media-links {
+.social-media-links li{
   list-style: none;
+  color: white;
+  display: inline;
+  padding: 12px;
+}
+
+
+.fa-facebook {
+  color: white;
+}
+
+.fa-yelp {
+  color: white;
+}
+
+.glyphicon-envelope {
+  color: white
 }
 
 .section-a {
@@ -63,7 +79,6 @@ body {
   align-items: center;
   justify-content: space-around;
 }
-
 
 .img-container img {
   width: 50%;
