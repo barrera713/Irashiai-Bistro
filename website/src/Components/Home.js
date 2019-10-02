@@ -10,9 +10,8 @@ class Home extends React.Component {
         return(
             <div>
             <section className="section-a">
-                <div className="img-container">
-                    {/* <img src='/roll-3.jpg' alt=""/>
-                    <img src='roll-2.jpg' alt=""/> */}
+                <div>
+                    <h1>Section A</h1>
                 </div>
             </section>
             <section className="section-b">

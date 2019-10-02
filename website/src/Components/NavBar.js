@@ -17,16 +17,18 @@ class NavBar extends React.Component {
                     <button>Get Directions</button>
                 </div>
                 </div>
-                <div className="social-media-links">
-                    <li>
-                        <a href="https://www.facebook.com/Irashiai2/" className="fa fa-facebook"></a>
-                    </li>
-                    <li>
-                        <a href="https://www.yelp.com/biz/irashiai-2-japanese-bistro-palm-bay" className="fa fa-yelp"></a>
-                    </li>
-                    <li>
-                        <a href="mailto: irashiaibistro@gmail.com" className="glyphicon glyphicon-envelope"></a>
-                    </li>
+                <div className="social-media-container">
+                    <ul className="social-links">
+                        <li>
+                            <a href="https://www.facebook.com/Irashiai2/" className="fa fa-facebook"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.yelp.com/biz/irashiai-2-japanese-bistro-palm-bay" className="fa fa-yelp"></a>
+                        </li>
+                        <li>
+                            <a href="mailto: irashiaibistro@gmail.com" className="glyphicon glyphicon-envelope"></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         )
