@@ -2,6 +2,14 @@ import React from 'react';
 
 class NavBar extends React.Component {
 
+    contactBtn = () => {
+        window.location.href = "tel:1-408-555-5555";
+    }
+
+    directionsBtn = () => {
+        window.location.href = "https://goo.gl/maps/JkyZLS3XToPGxVGK9";
+    }
+
 
     render() {
         
@@ -13,8 +21,8 @@ class NavBar extends React.Component {
                 <div>
                     <h3>Irashiai Bistro II</h3>
                 <div className="info-btns">
-                    <a href="tel: 713-373-6474" className="contact-btn">Contact Us</a>
-                    <a href="https://goo.gl/maps/JkyZLS3XToPGxVGK9">Directions</a>
+                    <button onClick={this.contactBtn}>Contact Us</button>
+                    <button onClick={this.directionsBtn}>Directions</button>
                 </div>
                 </div>
                 <div className="social-media-container">

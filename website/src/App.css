@@ -15,7 +15,7 @@ body {
   text-align: center;
 }
 
-
+/* NavBar start */
 
 .nav-container {
   display: flex;
@@ -33,7 +33,7 @@ body {
 }
 
 .nav-container h3 {
-  font-size: 2em;
+  font-size: 3em;
   font-family: 'Alice', serif;
   text-transform: capitalize;
   color: #B71001;
@@ -41,21 +41,23 @@ body {
 }
 
 
-.info-btns a {
+.info-btns button {
  font-size: 10px;
  letter-spacing: 4px;
  margin: 14px 7px;
  background-color: white;
  color: black;
+ border-color: black;
  padding: 10px 24px;
  border-radius: 12px;
  -webkit-transition-duration: 0.4s; 
  transition-duration: 0.4s;
  cursor: pointer;
+ outline: none;
 }
 
 
-.info-btns a:hover {
+.info-btns button:hover {
   background-color: #B71001; 
   color: white;
 }
@@ -95,6 +97,10 @@ body {
   color: white
 }
 
+/* NavBar end  */
+
+
+/* Image Carousel Start  */
 
 .gallery-title h2 {
   letter-spacing: 14px;
@@ -114,6 +120,9 @@ body {
   width: 100%;
 }
 
+/* Image Carousel End  */
+
+/* Opening Hours Start */
 
 .section-b {
   max-width: 900px;
@@ -137,6 +146,8 @@ body {
   font-size: 18px;
   font-family: 'Source Serif Pro', serif;
 }
+
+/* Opening Hours End  */
 
 
 @media (min-width: 600px){
