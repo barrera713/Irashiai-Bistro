@@ -11,25 +11,20 @@ class Home extends React.Component {
         return(
             <div>
                 <Slider />
-            <section className="section-b">
-                <h1>Section B</h1>
-                <div>
-                    <ul>
-                        <h3>Hours</h3>
-                        <li>Monday: Closed</li>
-                        <li>Tuesday: 11:00 AM - 9:30 PM</li>
-                        <li>Wednesday: 11:00 AM - 9:30 PM</li>
-                        <li>Thursday: 11:00 AM - 9:30 PM</li>
-                        <li>Friday: 11:00 AM - 9:30 PM</li>
-                        <li>Saturday: 11:00 AM - 9:30 PM</li>
-                        <li>Sunday: Closed</li>
-                    </ul>
+                <div className="section-b">
+                    <h1>Opening Hours</h1>
+                    <div className="hours-container">
+                        <ul>
+                            <li>Monday: Closed</li>
+                            <li>Tuesday: 11:00 AM - 9:30 PM</li>
+                            <li>Wednesday: 11:00 AM - 9:30 PM</li>
+                            <li>Thursday: 11:00 AM - 9:30 PM</li>
+                            <li>Friday: 11:00 AM - 9:30 PM</li>
+                            <li>Saturday: 11:00 AM - 9:30 PM</li>
+                            <li>Sunday: Closed</li>
+                        </ul>
+                    </div>
                 </div>
-            </section>
-            <section className="section-c">
-                <h4>Section C</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, nobis temporibus! Alias amet perspiciatis libero id eligendi, omnis hic vel voluptas iure a exercitationem suscipit fugit ea eaque? Saepe, facere.</p>
-            </section>
             </div>
         )
     }

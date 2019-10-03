@@ -13,8 +13,8 @@ class NavBar extends React.Component {
                 <div>
                     <h3>Irashiai Bistro II</h3>
                 <div className="info-btns">
-                    <button>Contact Us</button>
-                    <button>Get Directions</button>
+                    <a href="tel: 713-373-6474" className="contact-btn">Contact Us</a>
+                    <a href="https://goo.gl/maps/JkyZLS3XToPGxVGK9">Directions</a>
                 </div>
                 </div>
                 <div className="social-media-container">
