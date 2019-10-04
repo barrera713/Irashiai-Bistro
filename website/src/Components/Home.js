@@ -4,6 +4,10 @@ import Dessert from '../Menu/Dessert';
 import BarContainer from '../Menu/Bar/BarContainer';
 import Appetizers from '../Menu/Appetizers';
 import Lunch from '../Menu/Lunch';
+import Dinner from '../Menu/Dinner';
+import Specialty from '../Menu/Specialty';
+
+
 
 class Home extends React.Component {
 
@@ -11,12 +15,16 @@ class Home extends React.Component {
         dessert: false,
         bar: false, 
         appetizers: false, 
-        lunch: false
+        lunch: false,
+        dinner: false,
+        specialty: false
     }
 
 
     handleDessert = (e) => {
-        this.setState({ 
+        this.setState({
+            dinner: false,
+            specialty: false,
             lunch: false,
             bar: false,
             appetizers: false,
@@ -26,6 +34,8 @@ class Home extends React.Component {
 
     handleBar = (e) => {
         this.setState({ 
+            dinner: false,
+            specialty: false,
             lunch: false,
             dessert: false,
             appetizers: false,
@@ -35,6 +45,8 @@ class Home extends React.Component {
 
     handleAppetizers = (e) => {
         this.setState({
+            dinner: false,
+            specialty: false,
             lunch: false,
             dessert: false,
             appetizers: !this.state.appetizers,
@@ -44,10 +56,34 @@ class Home extends React.Component {
 
     handleLunch = (e) => {
         this.setState({
+            dinner: false,
+            specialty: false,
             dessert: false,
             appetizers: false,
             bar: false,
             lunch: !this.state.lunch
+        })
+    }
+
+    handleDinner = (e) => {
+        this.setState({
+            dinner: !this.state.dinner,
+            specialty: false,
+            dessert: false,
+            appetizers: false,
+            bar: false,
+            lunch: false
+        })
+    }
+
+    handleSpecialty = (e) => {
+        this.setState({
+            dinner: false,
+            dessert: false,
+            appetizers: false,
+            bar: false,
+            lunch: false,
+            specialty: !this.state.specialty
         })
     }
 
@@ -75,11 +111,15 @@ class Home extends React.Component {
                         <li onClick={this.handleDessert}>Dessert</li>
                         <li onClick={this.handleBar}>Bar</li>
                         <li onClick={this.handleLunch}>Lunch</li>
+                        <li onClick={this.handleDinner}>Dinner</li>
+                        <li onClick={this.handleSpecialty}>Specialty</li>
                     </ul>
                     { this.state.dessert ? <Dessert /> : null }
                     {this.state.bar ? <BarContainer /> : null }
                     {this.state.appetizers ? <Appetizers /> : null }
                     {this.state.lunch ? <Lunch /> : null }
+                    {this.state.dinner ? <Dinner /> : null }
+                    {this.state.specialty ? <Specialty /> : null }
             </div>
         )
     }
