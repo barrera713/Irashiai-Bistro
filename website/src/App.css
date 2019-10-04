@@ -150,6 +150,25 @@ body {
 /* Opening Hours End  */
 
 
+/* Menu  */
+
+.menu-log li {
+  list-style: none;
+  letter-spacing: 10px;
+  font-size: 18px;
+  font-family: 'Alice', serif;
+  margin: 28px;
+  cursor: pointer;
+}
+
+.menu-items p {
+  font-family: 'Alice', serif;
+  letter-spacing: 2px;
+  padding: 7px;
+  font-size: 18px;
+}
+
+
 @media (min-width: 600px){
 
 }

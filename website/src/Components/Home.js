@@ -1,10 +1,19 @@
 import React from 'react';
 import Slider from './Slider';
-
+import Dessert from '../Menu/Dessert';
 
 
 class Home extends React.Component {
 
+    state = {
+        dessert: false
+    }
+
+
+    handleDessert = (e) => {
+        this.setState({ dessert: !this.state.dessert })
+        console.log('inside handle dessert', this.state.dessert);
+    }
 
     render() {
         
@@ -25,6 +34,10 @@ class Home extends React.Component {
                         </ul>
                     </div>
                 </div>
+                    <ul className="menu-log">
+                        <li onClick={this.handleDessert}>Dessert</li>
+                    </ul>
+                    { this.state.dessert ? <Dessert className="menu-component"/> : null }
             </div>
         )
     }
