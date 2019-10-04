@@ -173,6 +173,21 @@ body {
   margin: 28px;
   cursor: pointer;
 }
+.menu-items h1 {
+  font-weight: 500;
+  padding: 18px;
+  font-family: 'Alice', serif;
+  font: bold;
+  letter-spacing: 7px;
+}
+
+.menu-items h2 {
+  font-weight: 500;
+  padding: 18px;
+  font-family: 'Alice', serif;
+  font: bold;
+  letter-spacing: 7px;
+}
 
 .menu-items h3 {
   font-weight: 500;
@@ -181,6 +196,7 @@ body {
   font: bold;
   letter-spacing: 7px;
 }
+
 
 .menu-items p {
   font-family: 'Alice', serif;
