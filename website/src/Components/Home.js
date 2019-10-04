@@ -1,18 +1,40 @@
 import React from 'react';
 import Slider from './Slider';
 import Dessert from '../Menu/Dessert';
-
+import BarContainer from '../Menu/Bar/BarContainer';
+import Appetizers from '../Menu/Appetizers';
 
 class Home extends React.Component {
 
     state = {
-        dessert: false
+        dessert: false,
+        bar: false, 
+        appetizers: false
     }
 
 
     handleDessert = (e) => {
-        this.setState({ dessert: !this.state.dessert })
-        console.log('inside handle dessert', this.state.dessert);
+        this.setState({ 
+            bar: false,
+            appetizers: false,
+            dessert: !this.state.dessert 
+        })
+    }
+
+    handleBar = (e) => {
+        this.setState({ 
+            dessert: false,
+            appetizers: false,
+            bar: !this.state.bar
+        })
+    }
+
+    handleAppetizers = (e) => {
+        this.setState({
+            dessert: false,
+            appetizers: !this.state.appetizers,
+            bar: false
+        })
     }
 
     render() {
@@ -35,9 +57,13 @@ class Home extends React.Component {
                     </div>
                 </div>
                     <ul className="menu-log">
+                        <li onClick={this.handleAppetizers}>Appetizers</li>
                         <li onClick={this.handleDessert}>Dessert</li>
+                        <li onClick={this.handleBar}>Bar</li>
                     </ul>
                     { this.state.dessert ? <Dessert className="menu-component"/> : null }
+                    {this.state.bar ? <BarContainer /> : null }
+                    {this.state.appetizers ? <Appetizers /> : null }
             </div>
         )
     }

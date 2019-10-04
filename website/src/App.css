@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+h5 {
+  color: red;
+}
+
 a:link {
   text-decoration: none;
 }
@@ -152,6 +156,15 @@ body {
 
 /* Menu  */
 
+.menu-log {
+  background: rgba(151, 151, 151, 0.623);
+}
+
+.menu-log li {
+  list-style: none;
+  display: inline-block;
+}
+
 .menu-log li {
   list-style: none;
   letter-spacing: 10px;
@@ -161,11 +174,23 @@ body {
   cursor: pointer;
 }
 
+.menu-items h3 {
+  font-weight: 500;
+  padding: 18px;
+  font-family: 'Alice', serif;
+  font: bold;
+  letter-spacing: 7px;
+}
+
 .menu-items p {
   font-family: 'Alice', serif;
   letter-spacing: 2px;
-  padding: 7px;
-  font-size: 18px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.bar-cat li {
+  font-size: 12px;
 }
 
 
