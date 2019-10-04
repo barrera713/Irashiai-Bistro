@@ -157,22 +157,28 @@ body {
 /* Menu  */
 
 .menu-log {
-  background: rgba(151, 151, 151, 0.623);
+  background: rgba(0, 0, 0, 0.623);
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .menu-log li {
   list-style: none;
   display: inline-block;
+  font-family: 'Alice', serif;
+  cursor: pointer;
+  margin: 24px;
+  font-size: 16px;
+  font-weight: 450;
 }
 
-.menu-log li {
-  list-style: none;
-  letter-spacing: 10px;
-  font-size: 18px;
-  font-family: 'Alice', serif;
-  margin: 28px;
+.menu-log li:hover {
+  color: white;
   cursor: pointer;
 }
+
+
 .menu-items h1 {
   font-weight: 500;
   padding: 18px;
@@ -206,9 +212,35 @@ body {
 }
 
 .bar-cat li {
-  font-size: 12px;
+  font-family: 'Alice', serif;
+  font-size: 14px;
+  font-weight: 450;
+  padding: 12px;
+  cursor: pointer;
 }
 
+
+/* Footer  */
+
+.footer {
+  display: flex;
+  background: rgba(0, 0, 0, 0.623);
+  list-style: none;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+
+.footer a {
+  color: black;
+  font-size: 16px;
+}
+
+.footer a:hover {
+  color: white;
+}
 
 @media (min-width: 600px){
 

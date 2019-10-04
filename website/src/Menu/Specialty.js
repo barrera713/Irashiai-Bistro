@@ -4,7 +4,7 @@ import React from 'react';
 function Specialty() {
 
     return(<div className="menu-items">
-        <h1>Maki A-Z</h1>
+        <h1>Maki Rolls</h1>
         <h3>*Aloha</h3>
         <p>Unagi, avocado topped w/sear tuna, masago, hawaiin and unagi sauce.</p>
         <p>9.95</p>

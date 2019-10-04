@@ -91,6 +91,22 @@ class Home extends React.Component {
         
         return(
             <div>
+                <div>
+                    <ul className="menu-log">
+                        <li onClick={this.handleAppetizers}>Appetizers</li>
+                        <li onClick={this.handleDessert}>Dessert</li>
+                        <li onClick={this.handleBar}>Bar</li>
+                        <li onClick={this.handleLunch}>Lunch</li>
+                        <li onClick={this.handleDinner}>Dinner</li>
+                        <li onClick={this.handleSpecialty}>Specials</li>
+                    </ul>
+                    {this.state.dessert ? <Dessert /> : null }
+                    {this.state.bar ? <BarContainer /> : null }
+                    {this.state.appetizers ? <Appetizers /> : null }
+                    {this.state.lunch ? <Lunch /> : null }
+                    {this.state.dinner ? <Dinner /> : null }
+                    {this.state.specialty ? <Specialty /> : null }
+                </div>
                 <Slider />
                 <div className="section-b">
                     <h1>Opening Hours</h1>
@@ -106,20 +122,17 @@ class Home extends React.Component {
                         </ul>
                     </div>
                 </div>
-                    <ul className="menu-log">
-                        <li onClick={this.handleAppetizers}>Appetizers</li>
-                        <li onClick={this.handleDessert}>Dessert</li>
-                        <li onClick={this.handleBar}>Bar</li>
-                        <li onClick={this.handleLunch}>Lunch</li>
-                        <li onClick={this.handleDinner}>Dinner</li>
-                        <li onClick={this.handleSpecialty}>Specialty</li>
-                    </ul>
-                    { this.state.dessert ? <Dessert /> : null }
-                    {this.state.bar ? <BarContainer /> : null }
-                    {this.state.appetizers ? <Appetizers /> : null }
-                    {this.state.lunch ? <Lunch /> : null }
-                    {this.state.dinner ? <Dinner /> : null }
-                    {this.state.specialty ? <Specialty /> : null }
+                <ul className="footer">
+                    <li>
+                    <a href="tel:1-321-312-4540">Contact</a>
+                    </li>
+                    <li>
+                    <a href="mailto: irashiaibistro@gmail.com">Email</a>
+                    </li>
+                    <li>
+                    <a href="https://goo.gl/maps/JkyZLS3XToPGxVGK9">4870 Babcock St NE #1, Palm Bay, FL 32905</a>
+                    </li>
+                </ul>
             </div>
         )
     }

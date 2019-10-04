@@ -3,7 +3,7 @@ import React from 'react';
 class NavBar extends React.Component {
 
     contactBtn = () => {
-        window.location.href = "tel:1-408-555-5555";
+        window.location.href = "tel:1-321-312-4540";
     }
 
     directionsBtn = () => {
