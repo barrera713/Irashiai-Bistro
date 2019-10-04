@@ -88,8 +88,14 @@ class Home extends React.Component {
     }
 
     render() {
-        
+
+        // let activeMenu = { 
+        //     overflow: "scroll",
+        //     height: "500px"
+        // };
+
         return(
+
             <div>
                 <div>
                     <ul className="menu-log">
@@ -100,13 +106,15 @@ class Home extends React.Component {
                         <li onClick={this.handleDinner}>Dinner</li>
                         <li onClick={this.handleSpecialty}>Specials</li>
                     </ul>
-                    {this.state.dessert ? <Dessert /> : null }
-                    {this.state.bar ? <BarContainer /> : null }
-                    {this.state.appetizers ? <Appetizers /> : null }
-                    {this.state.lunch ? <Lunch /> : null }
-                    {this.state.dinner ? <Dinner /> : null }
-                    {this.state.specialty ? <Specialty /> : null }
-                </div>
+                    <div className="menu-container">
+                        {this.state.dessert ? <Dessert /> : null }
+                        {this.state.bar ? <BarContainer /> : null }
+                        {this.state.appetizers ? <Appetizers /> : null }
+                        {this.state.lunch ? <Lunch /> : null }
+                        {this.state.dinner ? <Dinner /> : null }
+                        {this.state.specialty ? <Specialty /> : null }
+                    </div>
+                </div> 
                 <Slider />
                 <div className="section-b">
                     <h1>Opening Hours</h1>

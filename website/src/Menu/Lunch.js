@@ -4,7 +4,7 @@ import React from 'react';
 function Appetizers() {
 
     return(<div className="menu-items">
-       <h1>Hours 11:00 - 3:00</h1>
+       <h1>11:00 - 3:00</h1>
        <h2>Served with Miso Soup and Steamed Rice</h2>
        <p>Served with Miso Soup and Steamed Rice</p>
        <h3>Teriyaki Or Spicy Miso</h3>

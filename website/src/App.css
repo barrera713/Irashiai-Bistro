@@ -156,6 +156,11 @@ body {
 
 /* Menu  */
 
+.menu-container {
+  max-height: 500px;
+  overflow: scroll;
+}
+
 .menu-log {
   background: rgba(0, 0, 0, 0.623);
   justify-content: center;
@@ -232,10 +237,13 @@ body {
   justify-content: center;
 }
 
+.footer li {
+  padding: 12px;
+}
 
 .footer a {
   color: black;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .footer a:hover {
