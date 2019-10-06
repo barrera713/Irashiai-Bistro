@@ -89,10 +89,6 @@ class Home extends React.Component {
 
     render() {
 
-        // let activeMenu = { 
-        //     overflow: "scroll",
-        //     height: "500px"
-        // };
 
         return(
 

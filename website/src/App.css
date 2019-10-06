@@ -107,10 +107,9 @@ body {
 /* Image Carousel Start  */
 
 .gallery-title h2 {
-  letter-spacing: 14px;
+  letter-spacing: 10px;
   font-size: 28px;
   font-family: 'Alice', serif;
-  text-shadow: grey;
   margin: 28px;
 }
 
@@ -162,7 +161,7 @@ body {
 }
 
 .menu-log {
-  background: rgba(0, 0, 0, 0.623);
+  background: rgba(15, 15, 15, 0.315);
   justify-content: center;
   max-width: 900px;
   margin: 0 auto;
@@ -229,7 +228,7 @@ body {
 
 .footer {
   display: flex;
-  background: rgba(0, 0, 0, 0.623);
+  background: rgba(15, 15, 15, 0.315);
   list-style: none;
   justify-content: center;
   max-width: 900px;
