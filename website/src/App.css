@@ -116,6 +116,7 @@ body {
   letter-spacing: 10px;
   font-size: 30px;
   font-family: 'Alice', serif;
+  margin: 0;
 }
 
 .img-carousel img {
@@ -142,6 +143,7 @@ body {
   font-size: 30px;
   font-family: 'Alice', serif;
   padding: 30px;
+  margin: 0;
 }
 
 .hours-container li {
