@@ -112,7 +112,7 @@ body {
 }
 
 .section-a h2 {
-  padding: 30px;
+  /* padding: 30px; */
   letter-spacing: 10px;
   font-size: 30px;
   font-family: 'Alice', serif;
