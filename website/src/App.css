@@ -106,16 +106,16 @@ body {
 
 /* Image Carousel Start  */
 
-.gallery-title h2 {
-  letter-spacing: 10px;
-  font-size: 30px;
-  font-family: 'Alice', serif;
-  padding: 30px;
-}
-
 .section-a {
   max-width: 900px;
   margin: 0 auto;
+}
+
+.section-a h2 {
+  padding: 30px;
+  letter-spacing: 10px;
+  font-size: 30px;
+  font-family: 'Alice', serif;
 }
 
 .img-carousel img {
@@ -133,6 +133,7 @@ body {
   text-align: center;
   font-size: 1.1em;
   letter-spacing: 1px;
+  padding: 30px;
 }
 
 
@@ -249,8 +250,10 @@ body {
   color: white;
 }
 
-@media (min-width: 600px){
-
+@media screen and (max-width: 768px) {
+  .Foljoss {
+     margin-top: 17px;
+  }
 }
 
 
