@@ -95,11 +95,11 @@ class Home extends React.Component {
             <div>
                 <div>
                     <ul className="menu-log">
-                        <li onClick={this.handleAppetizers}>Appetizers</li>
-                        <li onClick={this.handleDessert}>Dessert</li>
+                        <li onClick={this.handleAppetizers}>Kitchen</li>
                         <li onClick={this.handleBar}>Bar</li>
                         <li onClick={this.handleLunch}>Lunch</li>
                         <li onClick={this.handleDinner}>Dinner</li>
+                        <li onClick={this.handleDessert}>Dessert</li>
                         <li onClick={this.handleSpecialty}>Specials</li>
                     </ul>
                     <div className="menu-container">

@@ -16,6 +16,11 @@ a:link {
   text-decoration: none;
 }
 
+p.words {
+  width: 5px;
+  word-wrap: break-word;
+}
+
 body { 
   background-image: url('/bg.jpg');
   background-size: cover;
@@ -190,7 +195,8 @@ body {
 
 .menu-items h1 {
   font-weight: 500;
-  padding: 18px;
+  font-size: 28px;
+  padding: 20px;
   font-family: 'Alice', serif;
   font: bold;
   letter-spacing: 7px;
@@ -198,6 +204,7 @@ body {
 
 .menu-items h2 {
   font-weight: 500;
+  font-size: 24px;
   padding: 18px;
   font-family: 'Alice', serif;
   font: bold;
@@ -206,7 +213,8 @@ body {
 
 .menu-items h3 {
   font-weight: 500;
-  padding: 18px;
+  font-size: 18px;
+  padding: 16px;
   font-family: 'Alice', serif;
   font: bold;
   letter-spacing: 7px;
@@ -216,16 +224,34 @@ body {
 .menu-items p {
   font-family: 'Alice', serif;
   letter-spacing: 2px;
-  padding: 5px;
+  padding: 7px;
   font-size: 16px;
+  margin: 0 auto;
+  width: 400px;
+  word-wrap: break-word;
 }
 
 .bar-cat li {
   font-family: 'Alice', serif;
-  font-size: 14px;
-  font-weight: 450;
+  font-size: 18px;
+  font-weight: 500;
   padding: 12px;
   cursor: pointer;
+}
+
+.bar-cat li:hover {
+  font-weight: 600;
+}
+
+.bar-cat h3 {
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.bar-cat h4 {
+  font-family: 'Alice', serif;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 

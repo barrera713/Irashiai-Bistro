@@ -4,7 +4,7 @@ import React from 'react';
 function Dinner() {
 
     return(<div className="menu-items">
-        <h1>3:00 - 9:30</h1>
+        <h1>Tuesday-Friday 3:00 - 9:30</h1>
         <h2>Teriyaki</h2>
         <p>Sauté seasonal veggies topped with protein with teriyaki glaze.</p>
         <h3>Tofu Yasai Itame</h3>
