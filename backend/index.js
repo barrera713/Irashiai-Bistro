@@ -2,9 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
-
 // Import Routes
 const authRoute = require('./routes/auth');
+const reserveRoute = require('./routes/reservations');
 
 dotenv.config();
 
@@ -21,6 +21,7 @@ app.use(express.json());
 
 // Route Middlewares
 app.use('/', authRoute);
+app.use('/', reserveRoute);
 
 
 
