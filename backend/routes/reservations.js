@@ -1,10 +1,11 @@
 const router = require('express').Router();
-const verify = require('./varifyToken');
+const adminAuth = require('./varifyToken');
 
-router.get('/reserve', verify , (req, res) => {
+router.get('/reservations', adminAuth, (req, res) => {
     res.json({ 
         reservations: { 
             time: '7pm',
+            admin: 'only and admin can see this',
             guests: 3
         } 
     });
