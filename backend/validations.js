@@ -1,7 +1,4 @@
 const Joi = require('@hapi/joi');
-// const myCustomJoi = Joi.extend(require('joi-phone-number'));
-
-// myCustomJoi.string().phoneNumber().validate('+32494567324');
 
 // register validation
 const registerValidation = data => {
@@ -30,9 +27,19 @@ const adminValidation = data => {
         password: Joi.string().min(6).required()
     })
     return schema.validate(data)
-}
+};
+
+
+const partnerValidation = data => {
+    const schema = Joi.object({
+        name: Joi.string().min(6).required(),
+        password: Joi.string().min(6).required()
+    })
+    return schema.validate(data)
+};
 
 
 module.exports.registerValidation = registerValidation;
 module.exports.loginValidation = loginValidation;
 module.exports.adminValidation = adminValidation;
+module.exports.partnerValidation = partnerValidation;

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const adminAuth = require('./varifyToken');
+const { adminAuth, partnerAuth } = require('./varifyToken');
 
 router.get('/reservations', adminAuth, (req, res) => {
     res.json({ 
@@ -9,6 +9,14 @@ router.get('/reservations', adminAuth, (req, res) => {
             guests: 3
         } 
     });
+});
+
+
+router.get('/only-partners', partnerAuth, (req, res) => {
+    res.json({
+        partners: 'this is for partners only',
+        info: 'idk'
+    })
 });
 
 module. exports = router;

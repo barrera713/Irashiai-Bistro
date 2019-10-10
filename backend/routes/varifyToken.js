@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 function userAuth(req, res, next) {
-    const token = req.header('Bearer');
+    const token = req.header('auth-token');
     if(!token) return res.status(401).send('Access denied');
 
     try {
@@ -15,7 +15,7 @@ function userAuth(req, res, next) {
 
 
 function adminAuth(req, res, next) {
-    const token = req.header('Bearer');
+    const token = req.header('auth-token');
     if(!token) return res.status(401).send('Access denied');
 
     try{
@@ -23,9 +23,24 @@ function adminAuth(req, res, next) {
         req.admin = verified;
         next();
     } catch (err) {
-        res.status(401).send('Invalid token');
+        res.status(400).send('Invalid token');
     }
-}
+};
 
-module.exports = userAuth;
-module.exports = adminAuth;
+
+function partnerAuth(req, res, next) {
+    const token = req.header('auth-token');
+    if(!token) return res.status(401).send('Access denied');
+
+    try {
+        const verified = jwt.verify(token, process.env.PARTNER_TOKEN);
+        req.partner = verified
+        next();
+    } catch (err) {
+        res.status(400).send('Invalid token');
+    }
+};
+
+
+
+module.exports = { adminAuth, userAuth, partnerAuth };
