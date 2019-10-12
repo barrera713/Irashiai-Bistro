@@ -2,10 +2,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 // Import Routes
-const reserveRoute = require('./routes/reservations');
+const testingRoute = require('./routes/testing');
 const adminRoute = require('./routes/admin');
 const partnerRoute = require('./routes/partner');
-
+const resRoute = require('./routes/reservation');
 
 
 
@@ -24,7 +24,8 @@ app.use(express.json());
 
 // Route Middlewares
 app.use('/admin', adminRoute);
-app.use('/', reserveRoute);
+app.use('/', testingRoute);
+app.use('/', resRoute);
 app.use('/partner', partnerRoute);
 
 

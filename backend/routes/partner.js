@@ -12,7 +12,7 @@ const jwt = require('jsonwebtoken');
 // Register partner 
 router.post('/new-partner', adminAuth, async (req, res) => {
 
-    const { error } = partnerValidation(req.body)
+    const { error } = partnerValidation(req.body);
     if(error) return res.status(400).send(error.details[0].message)
 
     // Hash password

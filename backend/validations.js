@@ -1,24 +1,18 @@
 const Joi = require('@hapi/joi');
 
-// register validation
-const registerValidation = data => {
+// reservation validation
+const resValidation = data => {
     const schema = Joi.object({
-        name: Joi.string().min(6).required(),
-        email: Joi.string().min(6).required().email(),
-        password: Joi.string().min(6).required(), 
-        contact: Joi.string().max(12)
+        time: Joi.date().required(),
+        count: Joi.number().required(),
+        guest: Joi.object().keys({
+            name: Joi.string().min(6).required(),
+            contact: Joi.string().max(12)
+        })
     })
-    return schema.validate(data);
+    return schema.validate(data)
 };
 
-// login validation
-const loginValidation = data => {
-    const schema = Joi.object({
-        email: Joi.string().min(6).required().email(),
-        password: Joi.string().min(6).required()
-    })
-    return schema.validate(data);
-};
 
 // admin validation
 const adminValidation = data => {
@@ -39,7 +33,6 @@ const partnerValidation = data => {
 };
 
 
-module.exports.registerValidation = registerValidation;
-module.exports.loginValidation = loginValidation;
 module.exports.adminValidation = adminValidation;
 module.exports.partnerValidation = partnerValidation;
+module.exports.resValidation = resValidation;

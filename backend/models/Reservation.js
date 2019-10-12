@@ -18,7 +18,7 @@ const reservationSchema = new mongoose.Schema({
             min: 6
         },
         contact: {
-            type: Number,
+            type: String,
             required: true,
             max: 12
         }
