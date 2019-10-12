@@ -9,6 +9,7 @@ router.post('/reserve', async (req, res) => {
     if(error) return res.status(400).send(error);
 
     const newReservation = new Reservation({
+        date: req.body.date,
         time: req.body.time,
         count: req.body.count,
         guest: {

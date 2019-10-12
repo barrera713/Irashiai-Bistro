@@ -2,8 +2,12 @@ const mongoose = require('mongoose');
 
 const reservationSchema = new mongoose.Schema({
     
-    time: {
+    date: {
         type: Date,
+        required: true
+    },
+    time: {
+        type: String,
         required: true
     },
     count: {

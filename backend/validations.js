@@ -3,7 +3,8 @@ const Joi = require('@hapi/joi');
 // reservation validation
 const resValidation = data => {
     const schema = Joi.object({
-        time: Joi.date().required(),
+        date: Joi.date().required(),
+        time: Joi.string().required(),
         count: Joi.number().required(),
         guest: Joi.object().keys({
             name: Joi.string().min(6).required(),
