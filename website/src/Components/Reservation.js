@@ -3,6 +3,23 @@ import React from 'react';
 
 class Reservation extends React.Component {
 
+    // state = {
+    //     date: '',
+    //     time: '',
+    //     count: '',
+    //     name: '',
+    //     contact: ''   
+    // }
+
+    // handleChange = (e) => {
+    //     this.setState({
+    //         date: e.target["date"].value,
+    //         time: e.target["time"].value,
+    //         count: e.target["count"].value,
+    //         name: e.target["full-name"].value,
+    //         contact: e.target["contact"].value
+    //     })
+    // }
     
     handleSubmit = (e) => {
         e.preventDefault()
@@ -20,11 +37,12 @@ class Reservation extends React.Component {
     
     render() {
 
+
         return(<div>
             <h1>Reservation</h1>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} id="form" >
                 <label>Date</label>
-                <input type="date" name="date"></input>
+                <input type="date" name="date" ></input>
                 <label>Time</label>
                 <select name="time">
                     <option value="11:00am">11:00 am</option>
@@ -49,11 +67,11 @@ class Reservation extends React.Component {
                     <option value="8:30pm">8:30 pm</option>
                 </select>
                 <label>Party Size</label>
-                <input type="text" name="count" placeholder="Number"></input>
+                <input type="text" name="count" ></input>
                 <label>Full Name</label>
-                <input type="text" name="full-name"></input>
+                <input type="text" name="full-name" ></input>
                 <label>Phone Number</label>
-                <input type="tel" name="contact"></input>
+                <input type="tel" name="contact" ></input>
                 <button type="submit">Submit</button>
             </form>
         </div>)

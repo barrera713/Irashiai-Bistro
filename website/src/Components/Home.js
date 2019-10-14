@@ -6,6 +6,7 @@ import Appetizers from '../Menu/Appetizers';
 import Lunch from '../Menu/Lunch';
 import Dinner from '../Menu/Dinner';
 import Specialty from '../Menu/Specialty';
+import { Link } from 'react-router-dom';
 
 
 
@@ -101,6 +102,9 @@ class Home extends React.Component {
                         <li onClick={this.handleDinner}>Dinner</li>
                         <li onClick={this.handleDessert}>Dessert</li>
                         <li onClick={this.handleSpecialty}>Specials</li>
+                        <li>
+                        <Link to="/reserve">Reserve</Link>
+                        </li>
                     </ul>
                     <div className="menu-container">
                         {this.state.dessert ? <Dessert /> : null }
