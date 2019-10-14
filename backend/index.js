@@ -6,6 +6,8 @@ const testingRoute = require('./routes/testing');
 const adminRoute = require('./routes/admin');
 const partnerRoute = require('./routes/partner');
 const resRoute = require('./routes/reservation');
+const cors = require('cors');
+
 
 
 
@@ -14,6 +16,7 @@ dotenv.config();
 const app = express();
 
 // Connect to DB
+app.use(cors());
 mongoose.connect(process.env.DB_CONNECT,
 { useNewUrlParser: true, useUnifiedTopology: true }, () => {
     console.log('Connected to db.. .')

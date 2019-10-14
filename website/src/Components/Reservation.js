@@ -1,25 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { postReservation } from '../Actions/Reservation';
 
 
 class Reservation extends React.Component {
 
-    // state = {
-    //     date: '',
-    //     time: '',
-    //     count: '',
-    //     name: '',
-    //     contact: ''   
-    // }
+    state = {
+        reservations: false
+    }
 
-    // handleChange = (e) => {
-    //     this.setState({
-    //         date: e.target["date"].value,
-    //         time: e.target["time"].value,
-    //         count: e.target["count"].value,
-    //         name: e.target["full-name"].value,
-    //         contact: e.target["contact"].value
-    //     })
-    // }
     
     handleSubmit = (e) => {
         e.preventDefault()
@@ -33,12 +22,21 @@ class Reservation extends React.Component {
            }
         }
         console.log('Inside submit', formData)
+        this.props.postReservation(formData);
+        this.setState({ reservations: !this.state.reservations })
     };
+    
+
     
     render() {
 
 
-        return(<div>
+        return(<div>{this.state.reservations ? 
+        <div>
+            <h1>Reservation Confirmed!</h1>
+        </div>
+        :
+        <div>
             <h1>Reservation</h1>
             <form onSubmit={this.handleSubmit} id="form" >
                 <label>Date</label>
@@ -74,9 +72,10 @@ class Reservation extends React.Component {
                 <input type="tel" name="contact" ></input>
                 <button type="submit">Submit</button>
             </form>
+        </div> }
         </div>)
     }
 
 }
 
-export default Reservation;
+export default connect(null, { postReservation })(Reservation);
