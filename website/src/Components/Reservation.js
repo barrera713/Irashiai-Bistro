@@ -6,34 +6,56 @@ import { postReservation } from '../Actions/Reservation';
 class Reservation extends React.Component {
 
     state = {
+        name: '',
         reservations: false
     }
 
+    handleChange = (e) => {
+        this.setState({ name: e.target.value })
+    }
+
+    capitalize = (word) =>  {
+        if (word !== '') {
+            return word.toLowerCase().split(' ').map( i =>  i[0].toUpperCase() + i.slice(1)).join(' ')
+        }
+    }
     
     handleSubmit = (e) => {
         e.preventDefault()
+        let nameArr = [];
+        let firstName = e.target["first-name"].value  
+        let lastName = e.target["last-name"].value
+        nameArr.push(firstName, lastName);
+        let stringName = nameArr.join(' ');
+        let capitalizedName = this.capitalize(stringName);
         const formData = {
            "date": e.target["date"].value,
            "time": e.target["time"].value,
            "count": e.target["count"].value,
            "guest": {
-               "name": e.target["full-name"].value,
+               "name": capitalizedName,
                "contact": e.target["contact"].value
            }
         }
         console.log('Inside submit', formData)
-        this.props.postReservation(formData);
+        // this.props.postReservation(formData);
         this.setState({ reservations: !this.state.reservations })
+    };
+
+    handleClick = () => {
+        window.location = '/'
     };
     
 
     
     render() {
 
+        let name = this.state.name
 
         return(<div>{this.state.reservations ? 
         <div>
-            <h1>Reservation Confirmed!</h1>
+            <h3>Thank you, {this.capitalize(name)} for reserving with us!</h3>
+            <button onClick={this.handleClick}>Return</button>
         </div>
         :
         <div>
@@ -66,8 +88,10 @@ class Reservation extends React.Component {
                 </select>
                 <label>Party Size</label>
                 <input type="text" name="count" ></input>
-                <label>Full Name</label>
-                <input type="text" name="full-name" ></input>
+                <label>First Name</label>
+                <input type="text" name="first-name" onChange={this.handleChange}></input>
+                <label>Last Name</label>
+                <input type="text" name="last-name"></input>
                 <label>Phone Number</label>
                 <input type="tel" name="contact" ></input>
                 <button type="submit">Submit</button>
