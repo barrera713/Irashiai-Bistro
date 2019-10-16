@@ -42,13 +42,24 @@ router.post('/login', async (req, res) => {
     // check if name is correct
     const partner = await Partner.findOne({ name: req.body.name });
     if(!partner) return res.status(400).send('Name or password is incorrect');
-
+    
     // Check if password is correct
     const validPassword = await bcrypt.compare(req.body.password, partner.password);
     if(!validPassword) return res.status(400).send('Email or password is incorrect');
+    
+    // const token = jwt.sign({  _id: partner._id }, process.env.PARTNER_TOKEN);
+    // res.header('auth-token', token).send(token);
+    // console.log(token)
 
-    const token = jwt.sign({  _id: partner._id }, process.env.PARTNER_TOKEN);
-    res.header('auth-token', token).send(token);
+    // jwt.sign({ _id: partner._id }, 'token', (err, token) => {
+    //     res.json({
+    //         token
+    //     });
+    // });
+
+    const token = jwt.sign({ _id: partner._id }, process.env.PARTNER_TOKEN);
+    res.send({ 'token': token })
+    
 });
 
 
