@@ -1,7 +1,7 @@
 import { RESERVATIONS } from './types';
 
 export const postReservation = (formData) => dispatch => {
-    console.log('in action');
+    console.log('in Reservation action');
     fetch('http://localhost:5000/reserve', {
         method: 'POST',
         headers: {
@@ -15,4 +15,4 @@ export const postReservation = (formData) => dispatch => {
         payload: reserve
         })
     )
-}
+};

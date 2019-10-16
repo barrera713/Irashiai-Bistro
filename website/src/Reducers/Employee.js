@@ -1,16 +1,16 @@
-import { RESERVATIONS } from '../Actions/types';
+import { CURRENT_EMPLOYEE } from '../Actions/types';
 
 const initialState = {
-    reservations: []
-};
+    current_user: []
+}
 
 export default function( state = initialState, action ) {
     switch (action.type) {
-        case RESERVATIONS: 
-        console.log('Inside Reservation reducer')
+        case CURRENT_EMPLOYEE: 
+        console.log('Inside Current User reducer')
         return {
             ...state,
-            reservations: action.payload
+            current_user: action.payload
         };
         default: 
         return state;
