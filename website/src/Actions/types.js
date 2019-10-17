@@ -1,2 +1,3 @@
 export const RESERVATIONS = "RESERVATIONS";
 export const CURRENT_EMPLOYEE = "CURRENT EMPLOYEE";
+export const ADMIN = "ADMIN";

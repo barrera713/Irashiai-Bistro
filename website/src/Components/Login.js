@@ -1,11 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { employeeLogin } from '../Actions/Employee';
+import { adminLogin } from '../Actions/Admin';
 
 
 class Login extends React.Component {
 
-    handleSubmit = (e) => {
+    adminSubmit = (e) => {
+        e.preventDefault()
+        const formData = {
+            "name": e.target["admin-name"].value,
+            "password": e.target["admin-password"].value
+        }
+        console.log('inside admin form', formData)
+        this.props.adminLogin(formData);
+    }
+
+
+    userSubmit = (e) => {
         e.preventDefault()
         const formData = {
             "name": e.target["name"].value,
@@ -18,17 +30,28 @@ class Login extends React.Component {
     render() {
 
         return(<div>
-            <form onSubmit={this.handleSubmit} className="login-form" >
-                <input placeholder="Username" type="text" name="name"></input>
-                <input placeholder="Password" type="text" name="password"></input>
+            <form onSubmit={this.adminSubmit} className="login-form">
+                <h3>Admin Login</h3>
+                <input placeholder="Username" type="text" name="admin-name" />
+                <input placeholder="Password" type="text" name="admin-password" />
                 <div>
                     <button>Confirm</button>
                 </div>
             </form>
+            <div>
+                <form onSubmit={this.userSubmit} className="login-form" >
+                    <h3>User Login</h3>
+                    <input placeholder="Username" type="text" name="name" />
+                    <input placeholder="Password" type="text" name="password" />
+                    <div>
+                        <button>Confirm</button>
+                    </div>
+                </form>
+            </div>
         </div>
         )
 
     }
 }
 
-export default connect(null, { employeeLogin })(Login);
+export default connect(null, { employeeLogin, adminLogin })(Login);
