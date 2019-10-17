@@ -9,12 +9,17 @@ export const employeeLogin = (formData) => dispatch => {
         },
         body: JSON.stringify(formData)
     })
-    .then( partner => partner.json())
-    .then(data => sessionStorage.setItem('token', data.token))
-    .then(partner => dispatch({
-        type: CURRENT_EMPLOYEE,
-        payload: partner
+    .then(res => {
+        if(res.ok) {
+            return res.json()
+            .then(data => sessionStorage.setItem('token', data.token))
+            .then(partner => dispatch({
+                type: CURRENT_EMPLOYEE,
+                payload: partner
+            })
+            )
+        } else {
+            window.alert('Invalid name or password')
+        }
     })
-    )
-    console.log('Inside Employee action')
 };

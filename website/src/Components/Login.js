@@ -12,7 +12,7 @@ class Login extends React.Component {
             "name": e.target["admin-name"].value,
             "password": e.target["admin-password"].value
         }
-        console.log('inside admin form', formData)
+        // console.log('inside admin form', formData)
         this.props.adminLogin(formData);
     }
 
@@ -23,7 +23,7 @@ class Login extends React.Component {
             "name": e.target["name"].value,
             "password": e.target["password"].value
         }
-        console.log('inside employee handleSubmit', formData);
+        // console.log('inside employee handleSubmit', formData);
         this.props.employeeLogin(formData);
     }
 
@@ -33,7 +33,7 @@ class Login extends React.Component {
             <form onSubmit={this.adminSubmit} className="login-form">
                 <h3>Admin Login</h3>
                 <input placeholder="Username" type="text" name="admin-name" />
-                <input placeholder="Password" type="text" name="admin-password" />
+                <input placeholder="Password" type="password" name="admin-password" />
                 <div>
                     <button>Confirm</button>
                 </div>
@@ -42,7 +42,7 @@ class Login extends React.Component {
                 <form onSubmit={this.userSubmit} className="login-form" >
                     <h3>User Login</h3>
                     <input placeholder="Username" type="text" name="name" />
-                    <input placeholder="Password" type="text" name="password" />
+                    <input placeholder="Password" type="password" name="password" />
                     <div>
                         <button>Confirm</button>
                     </div>

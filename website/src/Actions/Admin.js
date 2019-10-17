@@ -9,11 +9,17 @@ export const adminLogin = (formData) => dispatch => {
         },
         body: JSON.stringify(formData)
     })
-    .then( res => res.json())
-    .then( data => sessionStorage.setItem('token', data.token))
-    .then( admin => dispatch({
-        type: ADMIN,
-        payload: admin
+    .then(res => {
+        if(res.ok) {
+            return res.json()
+            .then( data => sessionStorage.setItem('token', data.token))
+            .then( admin => dispatch({
+                type: ADMIN,
+                payload: admin
+            })
+            )
+        } else {
+            window.alert('Invalid name or password')
+        }
     })
-    )
 };

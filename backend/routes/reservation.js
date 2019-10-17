@@ -17,6 +17,10 @@ router.post('/reserve', async (req, res) => {
             contact: req.body.guest.contact
         }
     })
+    const resAlreadyExist = await Reservation.findOne({ date: req.body.date, time: req.body.time })
+    if(resAlreadyExist) return res.status(400).send('Reservation has already been taken')
+
+
     try {
         const savedReservation = await newReservation.save();
         res.send({ savedReservation: savedReservation.id });
