@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const Reservation = require('../models/Reservation');
 const { resValidation } = require('../validations');
+const { partnerAuth } = require('./varifyToken');
 
 // Create reservation
 router.post('/reserve', async (req, res) => {
@@ -8,8 +9,8 @@ router.post('/reserve', async (req, res) => {
     const { error } = resValidation(req.body);
     if(error) return res.status(400).send(error);
     
-    const resAlreadyExist = await Reservation.findOne({ date: req.body.date, time: req.body.time })
-    if(resAlreadyExist) return res.status(400).send({ error: 'Reservation has already been taken'})
+    const resAlreadyExist = await Reservation.findOne({ date: req.body.date, time: req.body.time });
+    if(resAlreadyExist) return res.status(400).send({ error: 'Reservation has already been taken'});
 
     const newReservation = new Reservation({
         date: req.body.date,
@@ -24,11 +25,22 @@ router.post('/reserve', async (req, res) => {
 
     try {
         const savedReservation = await newReservation.save();
-        res.send({ savedReservation: savedReservation.id });
+        res.send({ savedReservation });
     } catch (err) {
         res.status(400).send(err)
     }
 
+});
+
+
+// Get all reservations
+router.get('/reservations', partnerAuth, async (req, res) => {
+    try{
+        const properties = await Reservation.find();
+        res.json(properties);
+    } catch(err) {
+        if(err) return res.status(401).send({ error: 'Access denied'})
+    }
 });
 
 module.exports = router;

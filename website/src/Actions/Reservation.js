@@ -1,5 +1,4 @@
-import { RESERVATIONS } from './types';
-import history from '../history';
+import { NEW_RESERVATION, FETCH_RESERVATIONS } from './types';
 
 export const postReservation = (formData) => dispatch => {
     console.log('in Reservation action');
@@ -14,7 +13,7 @@ export const postReservation = (formData) => dispatch => {
         if(res.ok) {
             return res.json()
             .then(reserve => dispatch({
-                type: RESERVATIONS,
+                type: NEW_RESERVATION,
                 payload: reserve
                 })
             )
@@ -25,6 +24,30 @@ export const postReservation = (formData) => dispatch => {
             }
         }
     })
-
-    
 };
+
+export const fetchReservations = () => dispatch => {
+    fetch('http://localhost:5000/reservations', {
+        method: 'GET',
+        headers: {
+            'Content-type': 'application/json',
+            'Authorization': `${sessionStorage.getItem('token')}`
+        }
+    })
+    .then(res => {
+        if(res.ok) {
+            return res.json()
+            .then(reservations => dispatch({
+                    type: FETCH_RESERVATIONS,
+                    payload: reservations
+                })
+            )
+        } else {
+           if(!res.ok) {
+               return res.json()
+               .then( window.alert('Something went wrong'))
+           }
+        }
+    })
+}
+

@@ -1,17 +1,23 @@
-import { RESERVATIONS } from '../Actions/types';
+import { NEW_RESERVATION, FETCH_RESERVATIONS } from '../Actions/types';
 
 const initialState = {
-    reservations: []
+    newReservation: [],
+    fetchReservations: []
 };
 
 export default function( state = initialState, action ) {
     switch (action.type) {
-        case RESERVATIONS: 
+        case NEW_RESERVATION: 
         console.log('Inside Reservation reducer')
         return {
             ...state,
-            reservations: action.payload
+            newReservation: action.payload
         };
+        case FETCH_RESERVATIONS:
+            return {
+                ...state,
+                fetchReservations: action.payload
+            };
         default: 
         return state;
     }
