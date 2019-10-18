@@ -1,4 +1,5 @@
 import { RESERVATIONS } from './types';
+import history from '../history';
 
 export const postReservation = (formData) => dispatch => {
     console.log('in Reservation action');
@@ -9,10 +10,21 @@ export const postReservation = (formData) => dispatch => {
         },
         body: JSON.stringify(formData)
     })
-    .then(res => res.json())
-    .then(reserve => dispatch({
-        type: RESERVATIONS,
-        payload: reserve
-        })
-    )
+    .then(res => {
+        if(res.ok) {
+            return res.json()
+            .then(reserve => dispatch({
+                type: RESERVATIONS,
+                payload: reserve
+                })
+            )
+        } else {
+            if(res.status === 400) {
+                return res.json()
+                .then(err => window.alert(err.error))
+            }
+        }
+    })
+
+    
 };

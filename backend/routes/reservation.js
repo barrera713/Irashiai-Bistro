@@ -7,6 +7,9 @@ router.post('/reserve', async (req, res) => {
     // Validate input data
     const { error } = resValidation(req.body);
     if(error) return res.status(400).send(error);
+    
+    const resAlreadyExist = await Reservation.findOne({ date: req.body.date, time: req.body.time })
+    if(resAlreadyExist) return res.status(400).send({ error: 'Reservation has already been taken'})
 
     const newReservation = new Reservation({
         date: req.body.date,
@@ -17,8 +20,6 @@ router.post('/reserve', async (req, res) => {
             contact: req.body.guest.contact
         }
     })
-    const resAlreadyExist = await Reservation.findOne({ date: req.body.date, time: req.body.time })
-    if(resAlreadyExist) return res.status(400).send('Reservation has already been taken')
 
 
     try {
