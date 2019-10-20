@@ -1,4 +1,5 @@
 import { CURRENT_EMPLOYEE } from './types';
+import history from '../history';
 
 export const employeeLogin = (formData) => dispatch => {
     fetch('http://localhost:5000/partner/login', {
@@ -16,7 +17,8 @@ export const employeeLogin = (formData) => dispatch => {
             .then(partner => dispatch({
                 type: CURRENT_EMPLOYEE,
                 payload: partner
-            })
+            }),
+            history.push('/reservations')
             )
         } else {
             window.alert('Invalid name or password')

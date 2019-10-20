@@ -1,4 +1,6 @@
 import { NEW_RESERVATION, FETCH_RESERVATIONS } from './types';
+import history from '../history';
+
 
 export const postReservation = (formData) => dispatch => {
     console.log('in Reservation action');
@@ -44,9 +46,10 @@ export const fetchReservations = () => dispatch => {
             )
         } else {
            if(!res.ok) {
-               return res.json()
-               .then( window.alert('Something went wrong'))
-           }
+                return res.json()
+                .then( window.alert('Something went wrong. Please try signing in again.'), history.push('/login')
+                )
+            }
         }
     })
 }
