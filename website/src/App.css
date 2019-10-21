@@ -339,6 +339,12 @@ body {
 }
 
 
+/* Reservations Page */
+.loader {
+  margin: 43%;
+}
+
+
 @media screen and (max-width: 768px) {
   .Foljoss {
      margin-top: 17px;

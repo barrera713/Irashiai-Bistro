@@ -5,6 +5,7 @@ import { adminLogin } from '../Actions/Admin';
 
 
 
+
 class Login extends React.Component {
 
     adminSubmit = (e) => {
@@ -18,14 +19,14 @@ class Login extends React.Component {
     }
 
 
-    userSubmit = (e) => {
+    userSubmit = async (e) => {
         e.preventDefault()
         const formData = {
             "name": e.target["name"].value,
             "password": e.target["password"].value
         }
         // console.log('inside employee handleSubmit', formData);
-        this.props.employeeLogin(formData);
+        await this.props.employeeLogin(formData)
     }
 
     render() {

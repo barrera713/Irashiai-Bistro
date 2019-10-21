@@ -40,17 +40,13 @@ export const fetchReservations = () => dispatch => {
         if(res.ok) {
             return res.json()
             .then(reservations => dispatch({
-                    type: FETCH_RESERVATIONS,
-                    payload: reservations
-                })
+                type: FETCH_RESERVATIONS,
+                payload: reservations
+            })
             )
-        } else {
-           if(!res.ok) {
-                return res.json()
-                .then( window.alert('Something went wrong. Please try signing in again.'), history.push('/login')
-                )
-            }
-        }
+        } 
+        // redirects if token is not present. Will not render data if token is not a valid token from server 
+        if(!sessionStorage.token ? history.push('/login') : null );
     })
-}
+};
 
