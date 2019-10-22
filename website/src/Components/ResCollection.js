@@ -16,24 +16,33 @@ class ResCollection extends React.Component {
 
     render() {
         
-        const { reservations, isLoaded } = this.props;
-        console.log('this is reservations:', reservations, 'this is isLoaded:', isLoaded)
-
-        if(reservations) return reservations.map(i => {
-            return (<div>
-                <ul>
-                <li>{i.date}</li>
-                </ul>
-            </div>) 
-        })
+        const { reservations } = this.props;
+        console.log('this is reservations:', reservations)
+        
+        return (<div>
+               <table className="table-data">
+                <tr>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Data</th>
+                    <th>Party Size</th>
+                </tr>
+               {reservations.map(i => <tr>
+                  <td>{i.guest.name}</td>
+                  <td>{i.guest.contact}</td>
+                  <td>{i.date}</td>
+                  <td>{i.count}</td>
+               </tr>)}
+               </table>
+            </div>
+        )
     }
 
 }
 
 
 const mapStateToProps = state => ({
-    reservations: state.allReservations.data,
-    isLoaded: state.allReservations.fetched
+    reservations: state.allReservations.data
 })
 
 

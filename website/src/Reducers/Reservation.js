@@ -2,8 +2,7 @@ import { NEW_RESERVATION, FETCHED } from '../Actions/types';
 
 const initialState = {
     newReservation: [],
-    data: [],
-    fetched: false
+    data: []
 };
 
 export default function( state = initialState, action ) {
