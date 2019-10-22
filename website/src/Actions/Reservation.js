@@ -1,4 +1,4 @@
-import { NEW_RESERVATION, FETCH_RESERVATIONS } from './types';
+import { NEW_RESERVATION, FETCHED } from './types';
 import history from '../history';
 
 
@@ -40,7 +40,7 @@ export const fetchReservations = () => dispatch => {
         if(res.ok) {
             return res.json()
             .then(reservations => dispatch({
-                type: FETCH_RESERVATIONS,
+                type: FETCHED,
                 payload: reservations
             })
             )

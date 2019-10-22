@@ -1,8 +1,9 @@
-import { NEW_RESERVATION, FETCH_RESERVATIONS } from '../Actions/types';
+import { NEW_RESERVATION, FETCHED } from '../Actions/types';
 
 const initialState = {
     newReservation: [],
-    fetchReservations: []
+    data: [],
+    fetched: false
 };
 
 export default function( state = initialState, action ) {
@@ -13,11 +14,11 @@ export default function( state = initialState, action ) {
             ...state,
             newReservation: action.payload
         };
-        case FETCH_RESERVATIONS:
-            return {
-                ...state,
-                fetchReservations: action.payload
-            };
+        case FETCHED:
+        return {
+            ...state,
+            data: action.payload
+        };
         default: 
         return state;
     }

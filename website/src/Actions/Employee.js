@@ -1,8 +1,8 @@
 import { CURRENT_EMPLOYEE } from './types';
-import history from '../history';
+// import history from '../history';
 
-export const employeeLogin = (formData) => async dispatch => {
-    await fetch('http://localhost:5000/partner/login', {
+export const employeeLogin = (formData) => dispatch => {
+    fetch('http://localhost:5000/partner/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -19,9 +19,9 @@ export const employeeLogin = (formData) => async dispatch => {
                 payload: partner
             })
             )
-            .then(history.push('/reservations'))
+            .then(window.location = '/reservations')
         } else {
             window.alert('Invalid name or password')
         }
     })
-};
+}

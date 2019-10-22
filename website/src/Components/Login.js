@@ -16,17 +16,18 @@ class Login extends React.Component {
         }
         // console.log('inside admin form', formData)
         this.props.adminLogin(formData);
+
     }
 
 
-    userSubmit = async (e) => {
+    userSubmit = (e) => {
         e.preventDefault()
         const formData = {
             "name": e.target["name"].value,
             "password": e.target["password"].value
         }
         // console.log('inside employee handleSubmit', formData);
-        await this.props.employeeLogin(formData)
+        this.props.employeeLogin(formData);
     }
 
     render() {
