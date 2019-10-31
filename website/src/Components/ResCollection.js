@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchReservations } from '../Actions/Reservation';
-// import Loader from './Loader'
+
 
 
 class ResCollection extends React.Component {
@@ -24,13 +24,15 @@ class ResCollection extends React.Component {
                 <tr>
                     <th>Name</th>
                     <th>Contact</th>
-                    <th>Data</th>
+                    <th>Date</th>
+                    <th>Time</th>
                     <th>Party Size</th>
                 </tr>
                {reservations.map(i => <tr>
                   <td>{i.guest.name}</td>
                   <td>{i.guest.contact}</td>
-                  <td>{i.date}</td>
+                  <td>{new Date(i.date).toDateString()}</td>
+                  <td>{i.time}</td>
                   <td>{i.count}</td>
                </tr>)}
                </table>
