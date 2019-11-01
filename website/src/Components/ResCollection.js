@@ -15,9 +15,18 @@ class ResCollection extends React.Component {
 
 
     render() {
-        
         const { reservations } = this.props;
+
+        // Reformating date
+
+        // let newDates = reservations.map(i => i.date.slice(0, 10);
+        // let wtfDates = newDates.split("-")
+        // console.log('wtf', newDates)
+
+
         console.log('this is reservations:', reservations)
+        reservations.sort( (a, b) => { return new Date(a.date) > new Date(b.date) ? 1 : -1 } )
+        if(reservations.sort( (a, b) => { return new Date(a.time) - new Date(b.time) })) 
         
         return (<div>
                <table className="table-data">
