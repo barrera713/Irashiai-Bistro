@@ -11,40 +11,42 @@ class ResCollection extends React.Component {
        this.props.fetchReservations();     
     }
 
+    handleClick = (selectedRow) => {
+        console.log("handle id click")
+    }
+
 
 
 
     render() {
         const { reservations } = this.props;
-
-        // Reformating date
-        let newDates = reservations.map(i => { return i.date.slice(0, 10) });
-        let newFormat = newDates.map(i => i.replace(/-/g, "/"));
-        console.log('replace hyphen for slash', newFormat);
-
         
         
         console.log('this is reservations:', reservations)
         reservations.sort( (a, b) => { return new Date(a.date) > new Date(b.date) ? 1 : -1 } )
         if(reservations.sort( (a, b) => { return new Date(a.time) - new Date(b.time) })) 
         
-        return (<div>
+        return (<div >
                <table className="table-data">
-                <tr>
-                    <th>Name</th>
-                    <th>Contact</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Party Size</th>
-                </tr>
-               {reservations.map(i => 
-                <tr>
-                  <td>{i.guest.name}</td>
-                  <td>{i.guest.contact}</td>
-                  <td>{new Date(i.date.slice(0, 10).replace(/-/g, "/")).toDateString()}</td>
-                  <td>{i.time}</td>
-                  <td>{i.count}</td>
-               </tr>)}
+                   <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Party Size</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {reservations.map(i => 
+                <tr onClick={ () => this.handleClick(i._id)} key={i._id}> 
+                    <td>{i.guest.name}</td>
+                    <td>{i.guest.contact}</td>
+                    <td>{new Date(i.date.slice(0, 10).replace(/-/g, "/")).toDateString()}</td>
+                    <td>{i.time}</td>
+                    <td>{i.count}</td>
+                </tr>)}
+                  </tbody>
                </table>
             </div>
         )
