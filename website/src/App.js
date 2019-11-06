@@ -5,7 +5,6 @@ import './App.css';
 import { Home } from './Components/Home';
 import { NavBar } from './Components/NavBar';
 import Reservation from './Components/Reservation';
-import { Footer } from './Components/Footer';
 import Login from './Components/Login';
 import ResCollection from './Components/ResCollection';
 
@@ -23,7 +22,6 @@ function App() {
         <Route exact path='/login' component={Login} />
         <Route exact path='/reservations' component={ResCollection} />
       </Switch>
-    <Footer />
     </Router>
     </div>
   );

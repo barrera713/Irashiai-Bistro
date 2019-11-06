@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { postReservation } from '../Actions/Reservation';
+import { Footer } from './Footer';
 
 
 class Reservation extends React.Component {
@@ -96,6 +97,7 @@ class Reservation extends React.Component {
                 </div>
             </form>
         </div> }
+        <Footer />
         </div>)
     }
 

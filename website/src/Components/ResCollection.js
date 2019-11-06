@@ -88,12 +88,14 @@ class ResCollection extends React.Component {
         )
     }
 
+
 }
 
 
 const mapStateToProps = state => ({
     reservations: state.allReservations.data
 })
+
 
 
 export default connect(mapStateToProps, { fetchReservations })(ResCollection)

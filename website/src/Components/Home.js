@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from './Slider';
+import { Footer } from './Footer';
 import Dessert from '../Menu/Dessert';
 import BarContainer from '../Menu/Bar/BarContainer';
 import Appetizers from '../Menu/Appetizers';
@@ -7,6 +8,7 @@ import Lunch from '../Menu/Lunch';
 import Dinner from '../Menu/Dinner';
 import Specialty from '../Menu/Specialty';
 import { Link } from 'react-router-dom';
+
 
 
 
@@ -130,6 +132,7 @@ class Home extends React.Component {
                         </ul>
                     </div>
                 </div>
+                <Footer/>
             </div>
         )
     }
