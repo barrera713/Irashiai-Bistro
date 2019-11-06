@@ -35,9 +35,9 @@ class ResCollection extends React.Component {
         const { reservations } = this.props;
         
         let newDate = new Date()
-        newDate.setDate(newDate.getDate() - 1 )
+        newDate.setDate(newDate.getDate() )
         let formatDate = newDate.toISOString().substr(0, 10)
-        let todayDate = date => date.includes(formatDate)
+        let today = date => date.includes(formatDate) 
     
         
         let matchDate = date => date.includes(this.state.selectedDate)
@@ -46,7 +46,7 @@ class ResCollection extends React.Component {
             if(this.state.selectedDate) {
                 return matchDate(i.date) 
             } else {
-                return todayDate(i.date)
+                return today(i.date)
             }
         })
         

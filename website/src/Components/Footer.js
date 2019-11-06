@@ -10,7 +10,7 @@ function Footer() {
     <a href="mailto: irashiaibistro@gmail.com">Email</a>
     </li>
     <li>
-    <a href="https://goo.gl/maps/JkyZLS3XToPGxVGK9">4870 Babcock St NE #1, Palm Bay, FL 32905</a>
+    <a href="https://goo.gl/maps/JkyZLS3XToPGxVGK9">Directions</a>
     </li>
 </ul>)
 }
