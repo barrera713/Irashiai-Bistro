@@ -34,24 +34,15 @@ body {
 /* NavBar start */
 
 .top-of-nav {
-  display: flex;
   background: #B71001;
-  padding: 8px;
+  padding: .75px;
   width: 100%;
-  list-style: none;
-  justify-content: center;
-  margin: 0;
 }
 
-
-.top-of-nav a {
-  color: black;
-  font-size: 12px;
-  margin: 10px;
-}
-
-.top-of-nav a:hover {
-  color: rgba(235, 235, 235, 0.753);
+.bottom-of-nav {
+  background: #B71001;
+  padding: .75px;
+  width: 100%;
 }
 
 .nav-container {
@@ -99,28 +90,51 @@ body {
   color: white;
 }
 
-.social-media-container {
+.page-links {
+  width: 100%;
   position: absolute;
-  margin-top: 130px;
-  font-size: 18px;
+  margin-top: 140px;
+  font-size: 17px;
 }
 
 
-.social-links li{
+.page-links li{
   list-style: none;
   display: inline-block;
   padding: 24px;
 }
 
+.page-links button {
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: white;
+}
+
+.page-links a {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: white;
+}
 
 .social-links a:hover {
+  border-bottom: 2px;
+}
+
+/* social media animation  */
+
+/* .social-links a:hover {
   color: rgba(167, 146, 129, 0.6);
   text-decoration: none;
   -webkit-transform: translate(-50%, -50%) rotate(360deg);
   transform: translate(-50%, -50%) rotate(360deg);
   -webkit-transition: all 0.3s ease; 
   transition: all 0.3s ease;
-}
+} */
+
 
 .fa-facebook {
   color: white;
