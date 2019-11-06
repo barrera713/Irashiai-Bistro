@@ -8,8 +8,7 @@ class ResCollection extends React.Component {
 
 
     state = {
-        selectedDate: null,
-        defaultDate: ''
+        selectedDate: null
     }
     
 
@@ -38,14 +37,17 @@ class ResCollection extends React.Component {
         let newDate = new Date()
         newDate.setDate(newDate.getDate() - 1 )
         let formatDate = newDate.toISOString().substr(0, 10)
+        let todayDate = date => date.includes(formatDate)
     
         
-        let matchDate = date => date.includes(this.state.selectedDate) || date.includes(formatDate)
-        
-        
+        let matchDate = date => date.includes(this.state.selectedDate)
         // if selected date matches props.date it returns that specific date
         let searchDate = reservations.filter( i => {
-            return matchDate(i.date)
+            if(this.state.selectedDate) {
+                return matchDate(i.date) 
+            } else {
+                return todayDate(i.date)
+            }
         })
         
         console.log('this is reservations:', reservations)
