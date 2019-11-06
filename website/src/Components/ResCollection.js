@@ -6,13 +6,15 @@ import { fetchReservations } from '../Actions/Reservation';
 
 class ResCollection extends React.Component {
 
+
     state = {
-        selectedDate: new Date()
+        selectedDate: null,
+        defaultDate: ''
     }
     
 
     componentDidMount() {
-       this.props.fetchReservations();     
+       this.props.fetchReservations();
     }
 
     handleClick = (selectedRow) => {
@@ -28,15 +30,17 @@ class ResCollection extends React.Component {
         })
     }
     
-    
-    
+
     render() {
-        console.log("inside date", this.state.selectedDate)
+        // console.log("inside date", this.state.selectedDate)
         const { reservations } = this.props;
         
+        let newDate = new Date()
+        newDate.setDate(newDate.getDate() - 1 )
+        let formatDate = newDate.toISOString().substr(0, 10)
+    
         
-        
-        let matchDate = date => date.includes(this.state.selectedDate)
+        let matchDate = date => date.includes(this.state.selectedDate) || date.includes(formatDate)
         
         
         // if selected date matches props.date it returns that specific date
@@ -53,7 +57,7 @@ class ResCollection extends React.Component {
             <div>
                 <form onSubmit={ (e) => this.handleDate(e)}>
                     <label>Date</label>
-                    <input type="date" name="date"></input>
+                    <input type="date" name="date" defaultValue={formatDate}></input>
                     <button type="submit">Search</button>
                 </form>
             </div>
@@ -72,7 +76,7 @@ class ResCollection extends React.Component {
                 <tr onClick={ () => this.handleClick(i._id)} key={i._id}> 
                     <td>{i.guest.name}</td>
                     <td>{i.guest.contact}</td>
-                    <td>{new Date(i.date.slice(0, 10).replace(/-/g, "/")).toDateString()}</td>
+                    <td>{ new Date(i.date.slice(0, 10).replace(/-/g, "/")).toDateString() }</td>
                     <td>{i.time}</td>
                     <td>{i.count}</td>
                 </tr>)}
