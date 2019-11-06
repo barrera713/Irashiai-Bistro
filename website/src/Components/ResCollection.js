@@ -31,21 +31,23 @@ class ResCollection extends React.Component {
     
     
     render() {
-        // console.log("inside date", this.state.selectedDate)
+        console.log("inside date", this.state.selectedDate)
         const { reservations } = this.props;
         
         
-        console.log('this is reservations:', reservations)
-        reservations.sort( (a, b) => { return new Date(a.date) > new Date(b.date) ? 1 : -1 } )
-        reservations.sort( (a, b) => { return new Date(a.time) - new Date(b.time) })
         
         let matchDate = date => date.includes(this.state.selectedDate)
-
-
+        
+        
         // if selected date matches props.date it returns that specific date
         let searchDate = reservations.filter( i => {
             return matchDate(i.date)
         })
+        
+        console.log('this is reservations:', reservations)
+        searchDate.sort( (a, b) => { return new Date(a.date + a.time) > new Date(b.date + b.time) ? 1 : -1 } )
+        searchDate.sort( (a, b) => { return new Date(a.time) > new Date(b.time) })
+
         
         return (<div >
             <div>
