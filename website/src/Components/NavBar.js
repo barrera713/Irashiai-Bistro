@@ -14,7 +14,15 @@ class NavBar extends React.Component {
 
     render() {
         
-        return(
+        return(<div>
+            <ul className="top-of-nav">
+                <li>
+                <a href="https://goo.gl/maps/JkyZLS3XToPGxVGK9">4870 Babcock St NE #1, Palm Bay, FL 32905</a>
+                </li>
+                <li>
+                <a href="tel:1-321-312-4540">(321)-312-4540</a>
+                </li>
+            </ul>
             <div className="nav-container">
                 <div className="logo">
                     <img src="/logo.jpg" alt=""/>
@@ -40,6 +48,7 @@ class NavBar extends React.Component {
                     </ul>
                 </div>
             </div>
+        </div>
         )
     }
 

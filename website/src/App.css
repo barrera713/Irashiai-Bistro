@@ -33,6 +33,27 @@ body {
 
 /* NavBar start */
 
+.top-of-nav {
+  display: flex;
+  background: #B71001;
+  padding: 8px;
+  width: 100%;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+}
+
+
+.top-of-nav a {
+  color: black;
+  font-size: 12px;
+  margin: 10px;
+}
+
+.top-of-nav a:hover {
+  color: rgba(235, 235, 235, 0.753);
+}
+
 .nav-container {
   display: flex;
   align-items: center;
