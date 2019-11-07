@@ -27,7 +27,6 @@ function Slider() {
 
   return (
     <div className="section-a">
-        <h2>Gallery</h2>
       <div className="img-carousel">
         <Gallery 
           index={index}

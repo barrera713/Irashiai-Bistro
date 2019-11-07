@@ -7,7 +7,6 @@ import Appetizers from '../Menu/Appetizers';
 import Lunch from '../Menu/Lunch';
 import Dinner from '../Menu/Dinner';
 import Specialty from '../Menu/Specialty';
-import { Link } from 'react-router-dom';
 
 
 
@@ -96,7 +95,7 @@ class Home extends React.Component {
         return(
 
             <div>
-                <div>
+                <div className="menu-log-container">
                     <ul className="menu-log">
                         <li onClick={this.handleAppetizers}>Kitchen</li>
                         <li onClick={this.handleBar}>Bar</li>
@@ -104,9 +103,6 @@ class Home extends React.Component {
                         <li onClick={this.handleDinner}>Dinner</li>
                         <li onClick={this.handleDessert}>Dessert</li>
                         <li onClick={this.handleSpecialty}>Specials</li>
-                        <li>
-                        <Link to="/reserve">Reserve</Link>
-                        </li>
                     </ul>
                     <div className="menu-container">
                         {this.state.dessert ? <Dessert /> : null }
@@ -117,7 +113,6 @@ class Home extends React.Component {
                         {this.state.specialty ? <Specialty /> : null }
                     </div>
                 </div> 
-                <Slider />
                 <div className="section-b">
                     <h1>Opening Hours</h1>
                     <div className="hours-container">
@@ -132,6 +127,7 @@ class Home extends React.Component {
                         </ul>
                     </div>
                 </div>
+                <Slider />
                 <Footer/>
             </div>
         )
