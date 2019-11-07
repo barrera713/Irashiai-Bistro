@@ -37,7 +37,7 @@ body {
 
 .top-of-nav {
   background: #B71001;
-  padding: .75px;
+  padding: 1px;
   width: 100%;
 }
 
@@ -186,14 +186,26 @@ body {
   margin: 0;
 }
 
+
 .hours-container {
   margin: 100px;
 }
 
+.hours-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding: 15px;
+}
+
+.hours-header a {
+  color: rgb(94, 94, 94);
+}
+
+
 .hours-container li {
   list-style: none;
   padding: 16px 0;
-  font-size: 18px;
+  font-size: 14px;
   font-family: 'Source Serif Pro', serif;
 }
 
@@ -304,7 +316,7 @@ body {
 
 .footer {
   display: flex;
-  background: #B71001;
+  background: black;
   list-style: none;
   justify-content: center;
   width: 100%;
@@ -313,6 +325,8 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
 }
 
 .footer li {
@@ -320,12 +334,18 @@ body {
 }
 
 .footer a {
-  color: black;
+  color: white;
   font-size: 12px;
 }
 
 .footer a:hover {
-  color: white;
+  color: wheat;
+}
+
+.footer-end {
+  background: red;
+  width: 100%;
+  padding: 1px;
 }
 
 

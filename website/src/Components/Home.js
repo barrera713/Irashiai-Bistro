@@ -115,6 +115,10 @@ class Home extends React.Component {
                     </div>
                 </div>  */}
                     <div className="hours-container">
+                        <div className="hours-header">
+                            <h3>Hours and Location</h3>
+                            <a href="https://goo.gl/maps/JkyZLS3XToPGxVGK9">4870 Babcock St. NE, Palm Bay, Florida</a>
+                        </div>
                         <ul>
                             <li>Monday: Closed</li>
                             <li>Tuesday: 11:00 AM - 9:30 PM</li>
