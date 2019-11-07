@@ -59,7 +59,6 @@ class Reservation extends React.Component {
         </div>
         :
         <div className="form-container">
-            <h1>Reservations</h1>
             <h4>*Please contact us if your party is larger than 6</h4>
             <form onSubmit={this.handleSubmit} className="res-form">
                 <label>Date</label>

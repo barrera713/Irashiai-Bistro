@@ -53,6 +53,7 @@ body {
 .logo img {
   height: 170px; 
   width: 170px;
+  cursor: pointer;
 }
 
 .nav-container h3 {
@@ -201,6 +202,9 @@ body {
   color: rgb(94, 94, 94);
 }
 
+.hours-header a:hover {
+  color: black;
+}
 
 .hours-container li {
   list-style: none;

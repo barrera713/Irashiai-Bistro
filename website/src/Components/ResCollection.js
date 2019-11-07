@@ -54,7 +54,7 @@ class ResCollection extends React.Component {
         searchDate.sort( (a, b) => { return new Date(a.date + a.time) > new Date(b.date + b.time) ? 1 : -1 } )
         searchDate.sort( (a, b) => { return new Date(a.time) > new Date(b.time) })
 
-        
+       
         return (<div >
             <div>
                 <form onSubmit={ (e) => this.handleDate(e)}>
@@ -62,6 +62,9 @@ class ResCollection extends React.Component {
                     <input type="date" name="date" defaultValue={formatDate}></input>
                     <button type="submit">Search</button>
                 </form>
+            </div>
+            <div>
+                <h3>[Display date selected]</h3>
             </div>
                <table className="table-data">
                    <thead>
