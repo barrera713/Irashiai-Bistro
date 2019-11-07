@@ -95,7 +95,8 @@ class Home extends React.Component {
         return(
 
             <div>
-                <div className="menu-log-container">
+                <div className="section-b">
+                {/* <div className="menu-log-container">
                     <ul className="menu-log">
                         <li onClick={this.handleAppetizers}>Kitchen</li>
                         <li onClick={this.handleBar}>Bar</li>
@@ -112,9 +113,7 @@ class Home extends React.Component {
                         {this.state.dinner ? <Dinner /> : null }
                         {this.state.specialty ? <Specialty /> : null }
                     </div>
-                </div> 
-                <div className="section-b">
-                    <h1>Opening Hours</h1>
+                </div>  */}
                     <div className="hours-container">
                         <ul>
                             <li>Monday: Closed</li>
@@ -126,8 +125,8 @@ class Home extends React.Component {
                             <li>Sunday: Closed</li>
                         </ul>
                     </div>
-                </div>
                 <Slider />
+                </div>
                 <Footer/>
             </div>
         )

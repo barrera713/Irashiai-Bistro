@@ -8,7 +8,7 @@ function Slider() {
 
   const images = [
     {
-        src: "/roll-3.jpg",
+      src: "/entree.jpg"
     },
     {
         src: "/roll-2.jpg"
@@ -17,7 +17,7 @@ function Slider() {
         src: "/fish.jpg"
     }, 
     {
-      src: "/entree.jpg"
+      src: "/roll-3.jpg"
     },
     {
       src: '/steak-onions.jpg'

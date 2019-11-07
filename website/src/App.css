@@ -34,13 +34,8 @@ body {
 
 /* NavBar start */
 
-.top-of-nav {
-  background: #B71001;
-  padding: .75px;
-  width: 100%;
-}
 
-.bottom-of-nav {
+.top-of-nav {
   background: #B71001;
   padding: .75px;
   width: 100%;
@@ -49,11 +44,10 @@ body {
 .nav-container {
   display: flex;
   align-items: center;
-  height: 350px;
+  height: 340px;
   background-color: black;
   justify-content: center;
-  /* max-width: 900px;
-  margin: 0 auto; */
+  margin: 0;
 }
 
 .logo img {
@@ -92,10 +86,14 @@ body {
 }
 
 .page-links {
+  background-color: black;
   width: 100%;
-  position: absolute;
-  margin-top: 140px;
   font-size: 17px;
+  /* position: absolute; */
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 
@@ -121,9 +119,7 @@ body {
   color: white;
 }
 
-.social-links a:hover {
-  border-bottom: 2px;
-}
+
 
 /* social media animation  */
 
@@ -168,8 +164,6 @@ body {
 
 .img-carousel img {
   object-fit: cover;
-  /* width: 100%; */
-  /* max-width: 900px; */
 }
 
 /* Image Carousel End  */
@@ -177,8 +171,8 @@ body {
 /* Opening Hours Start */
 
 .section-b {
-  /* max-width: 900px;
-  margin: 0 auto; */
+  /* max-width: 900px; */
+  margin: 0 auto;
   font-size: 1.1em;
   letter-spacing: 1px;
 }
@@ -192,9 +186,13 @@ body {
   margin: 0;
 }
 
+.hours-container {
+  margin: 100px;
+}
+
 .hours-container li {
   list-style: none;
-  padding: 18px 0;
+  padding: 16px 0;
   font-size: 18px;
   font-family: 'Source Serif Pro', serif;
 }
@@ -210,6 +208,7 @@ body {
   top: 0;
   z-index: 1;
 }
+
 
 .menu-log {
   justify-content: center;
@@ -305,7 +304,7 @@ body {
 
 .footer {
   display: flex;
-  background: rgba(15, 15, 15, 0.445);
+  background: #B71001;
   list-style: none;
   justify-content: center;
   width: 100%;
