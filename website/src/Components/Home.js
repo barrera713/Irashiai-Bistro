@@ -1,5 +1,4 @@
 import React from 'react';
-import Slider from './Slider';
 import { Footer } from './Footer';
 import Dessert from '../Menu/Dessert';
 import BarContainer from '../Menu/Bar/BarContainer';
@@ -146,7 +145,6 @@ class Home extends React.Component {
                             <li>Sunday: Closed</li>
                         </ul>
                     </div>
-                {/* <Slider /> */}
                 <div className="img-container">
                     <ul>
                         <li>

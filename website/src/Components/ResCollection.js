@@ -56,7 +56,7 @@ class ResCollection extends React.Component {
 
        
         return (<div >
-            <div>
+            <div className="select-date-form">
                 <form onSubmit={ (e) => this.handleDate(e)}>
                     <label>Date</label>
                     <input type="date" name="date" defaultValue={formatDate}></input>
@@ -65,28 +65,30 @@ class ResCollection extends React.Component {
             </div>
             <div>
                 <h3>[Display date selected]</h3>
+            </div >
+            <div className="table-data-container">
+                <table className="table-data">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Contact</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Party Size</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {searchDate.map(i => 
+                    <tr onClick={ () => this.handleClick(i._id)} key={i._id}> 
+                        <td>{i.guest.name}</td>
+                        <td>{i.guest.contact}</td>
+                        <td>{ new Date(i.date.slice(0, 10).replace(/-/g, "/")).toDateString() }</td>
+                        <td>{i.time}</td>
+                        <td>{i.count}</td>
+                    </tr>)}
+                    </tbody>
+                </table>
             </div>
-               <table className="table-data">
-                   <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Contact</th>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Party Size</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {searchDate.map(i => 
-                <tr onClick={ () => this.handleClick(i._id)} key={i._id}> 
-                    <td>{i.guest.name}</td>
-                    <td>{i.guest.contact}</td>
-                    <td>{ new Date(i.date.slice(0, 10).replace(/-/g, "/")).toDateString() }</td>
-                    <td>{i.time}</td>
-                    <td>{i.count}</td>
-                </tr>)}
-                  </tbody>
-               </table>
             </div>
         )
     }
