@@ -23,12 +23,10 @@ p.words {
 }
 
 body { 
-  /* background-image: url('/bg.jpg');
-  background-size: cover; */
   background-color: wheat;
   text-align: center;
-  margin: 0 auto;
-  /* transform-style: preserve-3d; */
+  margin: 0 auto; 
+  width: 100vw;
   height: 100vh;
 }
 
@@ -95,7 +93,10 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
+
+
 
 
 .page-links li{
@@ -163,11 +164,37 @@ body {
   margin: 0;
 }
 
-.img-carousel img {
+/* .img-carousel img {
+  object-fit: cover;
+}  */
+
+.img-container {
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.img-container ul {
+  margin: 0;
+  padding: 0;
+} 
+
+.img-container li {
+  /* width: 50%; */
+  list-style: none;
+  margin: 5px;
+}
+
+.img-container li img {
+  width: 60%;
   object-fit: cover;
 }
 
+
+
 /* Image Carousel End  */
+
+
 
 /* Opening Hours Start */
 
@@ -179,23 +206,14 @@ body {
 }
 
 
-.section-b h1 {
-  padding: 30px;
-  letter-spacing: 10px;
-  font-size: 30px;
-  font-family: 'Alice', serif;
-  margin: 0;
-}
-
-
 .hours-container {
-  margin: 100px;
+  margin: 75px;
 }
 
 .hours-header {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  padding: 15px;
+  padding: 10px;
 }
 
 .hours-header a {
@@ -421,11 +439,18 @@ body {
 tr:hover {background-color:#f5f5f5;}
 
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
+  .img-container li img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* @media screen and (max-width: 768px) {
   .Foljoss {
      margin-top: 17px;
   }
-};
+}; */
 
 
 

@@ -89,6 +89,24 @@ class Home extends React.Component {
         })
     }
 
+    // const images = [
+    //     {
+    //       src: "/entree.jpg"
+    //     },
+    //     {
+    //         src: "/roll-2.jpg"
+    //     },
+    //     {
+    //         src: "/fish.jpg"
+    //     }, 
+    //     {
+    //       src: "/roll-3.jpg"
+    //     },
+    //     {
+    //       src: '/steak-onions.jpg'
+    //     }
+    //   ]
+
     render() {
 
 
@@ -129,7 +147,26 @@ class Home extends React.Component {
                             <li>Sunday: Closed</li>
                         </ul>
                     </div>
-                <Slider />
+                {/* <Slider /> */}
+                <div className="img-container">
+                    <ul>
+                        <li>
+                            <img src='/roll-2.jpg' alt=''></img>
+                        </li>
+                        <li>
+                            <img src='/steak-onions.jpg' alt=''></img>
+                        </li>
+                        <li>
+                            <img src='/fish.jpg' alt=''></img>
+                        </li>
+                        <li>
+                            <img src='/entree.jpg' alt=''></img>
+                        </li>
+                        <li>
+                            <img src='/roll-3.jpg' alt=''></img>
+                        </li>
+                    </ul>
+                </div>
                 </div>
                 <Footer/>
             </div>
