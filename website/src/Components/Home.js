@@ -1,13 +1,12 @@
 import React from 'react';
 import { Footer } from './Footer';
-import Dessert from '../Menu/Dessert';
-import BarContainer from '../Menu/Bar/BarContainer';
-import Appetizers from '../Menu/Appetizers';
-import Lunch from '../Menu/Lunch';
-import Dinner from '../Menu/Dinner';
-import Specialty from '../Menu/Specialty';
-
-
+import { About } from './About';
+// import Dessert from '../Menu/Dessert';
+// import BarContainer from '../Menu/Bar/BarContainer';
+// import Appetizers from '../Menu/Appetizers';
+// import Lunch from '../Menu/Lunch';
+// import Dinner from '../Menu/Dinner';
+// import Specialty from '../Menu/Specialty';
 
 
 class Home extends React.Component {
@@ -88,24 +87,6 @@ class Home extends React.Component {
         })
     }
 
-    // const images = [
-    //     {
-    //       src: "/entree.jpg"
-    //     },
-    //     {
-    //         src: "/roll-2.jpg"
-    //     },
-    //     {
-    //         src: "/fish.jpg"
-    //     }, 
-    //     {
-    //       src: "/roll-3.jpg"
-    //     },
-    //     {
-    //       src: '/steak-onions.jpg'
-    //     }
-    //   ]
-
     render() {
 
         return(
@@ -164,6 +145,7 @@ class Home extends React.Component {
                         </li>
                     </ul>
                 </div>
+                <About />
                 </div>
                 <Footer/>
             </div>

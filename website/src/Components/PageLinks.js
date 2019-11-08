@@ -21,13 +21,14 @@ class PageLinks extends React.Component {
         history.push('/about')
     }
 
-
+    handleAbout = () => {
+        // scroll function
+    }
 
     render() {
 
         return (
-            <div className="page-links-container">
-
+        <div className="page-links-container">
             <div className="page-links">
                 <ul >
                     <li>
@@ -44,8 +45,7 @@ class PageLinks extends React.Component {
                     </li>
                 </ul> 
             </div>
-
-            </div>
+        </div>
         )
     }
 }

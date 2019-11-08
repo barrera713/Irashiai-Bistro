@@ -401,6 +401,20 @@ body {
 }
 
 
+/* About section */
+.about-section {
+  margin: 50px;
+}
+
+.about-section h3 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+}
+
+/* About section end */
+
+
+
 /* Footer  */
 
 .footer {
