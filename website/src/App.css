@@ -164,11 +164,84 @@ body {
 }
 
 .img-container {
-  max-height: 700px;
-  margin: 0 auto;
-  background-color: #FEFEFB;
+  max-height: 500px;
+  /* margin: 0 auto; */
+  /* background-color: #FFFF8B; */
   overflow: scroll;
 }
+
+.img-container:hover li:nth-child(2) {
+  -webkit-animation-name: slightRight; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: .5;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+
+  animation-name: slideRight;
+  animation-duration: 1s;
+  animation-delay: .5;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.img-container:hover li:nth-child(3) {
+  -webkit-animation-name: slightRight; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-name: .5;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+
+  animation-name: slideRight;
+  animation-duration: 1.5s;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.img-container:hover li:nth-child(4) {
+  -webkit-animation-name: slightRight; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: .5;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+
+  animation-name: slideRight;
+  animation-duration: 2s;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+
+.img-container:hover li:nth-child(4) {
+  -webkit-animation-name: slightRight; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-name: .5;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+
+  animation-name: slideRight;
+  animation-duration: 2.5s;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.img-container:hover li:nth-child(5) {
+  -webkit-animation-name: slightRight; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 3.5s;
+  -webkit-animation-name: .5;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+
+  animation-name: slideRight;
+  animation-duration: 3.5s;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+
 
 .img-container ul {
   margin: 0;
@@ -179,38 +252,6 @@ body {
   /* width: 50%; */
   list-style: none;
   margin: 5px;
-}
-
-
-
-.img-container li:nth-child(1) {
-  animation-name: slideRight;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-.img-container li:nth-child(2) {
-  animation-name: slideRight;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-}
-
-.img-container li:nth-child(3) {
-  animation-name: slideRight;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-
-.img-container li:nth-child(4) {
-  animation-name: slideRight;
-  animation-duration: 2.5s;
-  animation-fill-mode: forwards;
-}
-
-.img-container li:nth-child(5) {
-  animation-name: slideRight;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
 }
 
 
@@ -455,7 +496,7 @@ body {
 /* Reservations Page */
 
 .select-date-form {
-  margin: 30px;
+  margin: 25px;
 }
 
 
@@ -463,9 +504,15 @@ body {
   width: 100%;
 }
 
+.table-data-container h3 {
+  font-size: 24px;
+  padding: 2px;
+}
+
 .table-data {
   margin: 0 auto;
   width: 100%;
+  font-size: 10px;
 }
 
 
@@ -487,24 +534,21 @@ tr:hover {background-color:#f5f5f5;}
 
 }
 
-
-
-
 /* Animations  */
 
 
 /* Safari 4.0 - 8.0 */
 
 @-webkit-keyframes slideRight {
-  0%{ transform: translateY(0px); }
-  50%, 70%{ transform: translateX(2000px); }
+  0%{ transform: translateX(-1000px); }
+  /* 50%, 70%{ transform: translateX(2000px); } */
   100% { transform: translateY(0px); }
 }
 
 /* Standard syntax */
 
 @keyframes slideRight {
-  0% { transform: translateY(0px); }
-  50%, 70%{ transform: translateX(2000px); }
+  0% { transform: translateX(-1000px); }
+  /* 50%, 70%{ transform: translateX(2000px); } */
   100% { transform: translateY(0px); }
 }

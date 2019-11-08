@@ -63,10 +63,8 @@ class ResCollection extends React.Component {
                     <button type="submit">Search</button>
                 </form>
             </div>
-            <div>
-                <h3>[Display date selected]</h3>
-            </div >
             <div className="table-data-container">
+                <h3>Date Header</h3>
                 <table className="table-data">
                     <thead>
                         <tr>
