@@ -126,8 +126,8 @@ class Home extends React.Component {
                             <li>Sunday: Closed</li>
                         </ul>
                     </div>
-                <div className="img-container">
-                    <ul>
+                <div >
+                    <ul className="img-container">
                         <li>
                             <img src='/roll-2.jpg' alt=''></img>
                         </li>

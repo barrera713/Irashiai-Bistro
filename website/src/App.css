@@ -165,82 +165,31 @@ body {
 
 .img-container {
   max-height: 500px;
-  /* margin: 0 auto; */
+  margin: 0 auto;
   /* background-color: #FFFF8B; */
   overflow: scroll;
 }
 
-.img-container:hover li:nth-child(2) {
-  -webkit-animation-name: slightRight; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 1s;
-  -webkit-animation-name: .5;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 1;
-
-  animation-name: slideRight;
-  animation-duration: 1s;
-  animation-delay: .5;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
+.img-container img {
+  box-shadow : 0px 10px 15px 0px rgba(0, 0, 0, 0.801);
+  /* margin: 10px; */
+  margin-bottom: 10px;
 }
 
-.img-container:hover li:nth-child(3) {
-  -webkit-animation-name: slightRight; /* Safari 4.0 - 8.0 */
+
+.img-container li img:hover {
+  box-shadow : 0px 10px 15px 0px #B71001;
+}
+
+/* .img-container li:hover + li img {
+  -webkit-animation-name: slightRight; 
   -webkit-animation-duration: 1.5s;
-  -webkit-animation-name: .5;
   -webkit-animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 1;
 
   animation-name: slideRight;
   animation-duration: 1.5s;
-  animation-delay: .5s;
   animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-.img-container:hover li:nth-child(4) {
-  -webkit-animation-name: slightRight; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 2s;
-  -webkit-animation-name: .5;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 1;
-
-  animation-name: slideRight;
-  animation-duration: 2s;
-  animation-delay: .5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-
-.img-container:hover li:nth-child(4) {
-  -webkit-animation-name: slightRight; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 2.5s;
-  -webkit-animation-name: .5;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 1;
-
-  animation-name: slideRight;
-  animation-duration: 2.5s;
-  animation-delay: .5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-.img-container:hover li:nth-child(5) {
-  -webkit-animation-name: slightRight; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 3.5s;
-  -webkit-animation-name: .5;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 1;
-
-  animation-name: slideRight;
-  animation-duration: 3.5s;
-  animation-delay: .5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
+}  */
 
 
 .img-container ul {
@@ -556,7 +505,7 @@ tr:hover {background-color:#f5f5f5;}
 @-webkit-keyframes slideRight {
   0%{ transform: translateX(-1000px); }
   /* 50%, 70%{ transform: translateX(2000px); } */
-  100% { transform: translateY(0px); }
+  100% { transform: translateY(0px);}
 }
 
 /* Standard syntax */
@@ -564,5 +513,5 @@ tr:hover {background-color:#f5f5f5;}
 @keyframes slideRight {
   0% { transform: translateX(-1000px); }
   /* 50%, 70%{ transform: translateX(2000px); } */
-  100% { transform: translateY(0px); }
+  100% { transform: translateY(0px);}
 }
