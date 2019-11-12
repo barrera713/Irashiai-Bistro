@@ -8,6 +8,8 @@ import { Home } from './Components/Home';
 import Reservation from './Components/Reservation';
 import Login from './Components/Login';
 import ResCollection from './Components/ResCollection';
+import MenuContainer from './Components/MenuContainer';
+import About from './Components/About';
 
 
 
@@ -23,6 +25,8 @@ function App() {
         <Route exact path='/reserve' component={Reservation} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/reservations' component={ResCollection} />
+        <Route exact path='/menu' component={MenuContainer} />
+        <Route exact path='/about' component={About} />
       </Switch>
     </Router>
     </div>

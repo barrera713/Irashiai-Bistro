@@ -4,13 +4,10 @@ import history from '../history';
 class PageLinks extends React.Component {
 
 
-    contactBtn = () => {
-        window.location.href = "tel:1-321-312-4540";
-    }
 
-    directionsBtn = () => {
-        window.location.href = "https://goo.gl/maps/JkyZLS3XToPGxVGK9";
-    }
+   handleMenu = () => {
+       history.push('/menu')
+   }
 
 
     handleReserve = () => {
@@ -21,9 +18,6 @@ class PageLinks extends React.Component {
         history.push('/about')
     }
 
-    handleAbout = () => {
-        // scroll function
-    }
 
     render() {
 
@@ -33,7 +27,7 @@ class PageLinks extends React.Component {
                 <ul >
                     <li>
                         {/* <a href="https://www.facebook.com/Irashiai2/" className="fa fa-facebook"> </a> */}
-                        <a href="tel:1-321-312-4540">contact</a>
+                        <button onClick={this.handleMenu}>menu</button>
                     </li>
                     <li>
                         {/* <a href="https://www.yelp.com/biz/irashiai-2-japanese-bistro-palm-bay" className="fa fa-yelp"> </a> */}

@@ -13,7 +13,7 @@ export default class MenuContainer extends React.Component {
     state = {
         dessert: false,
         bar: false, 
-        appetizers: false, 
+        appetizers: true, 
         lunch: false,
         dinner: false,
         specialty: false
@@ -90,11 +90,10 @@ export default class MenuContainer extends React.Component {
     render() {
 
 
-        return(<div className="menu-section">
-            <h3>Menu</h3>
+        return(<div>
             <div>
                 <div className="menu-log-container">
-                    <ul className="menu-log">
+                    <ul>
                         <li onClick={this.handleAppetizers}>Kitchen</li>
                         <li onClick={this.handleBar}>Bar</li>
                         <li onClick={this.handleLunch}>Lunch</li>
@@ -102,7 +101,7 @@ export default class MenuContainer extends React.Component {
                         <li onClick={this.handleDessert}>Dessert</li>
                         <li onClick={this.handleSpecialty}>Specials</li>
                     </ul>
-                    <div className="menu-container">
+                    <div className="selected-category">
                         {this.state.dessert ? <Dessert /> : null }
                         {this.state.bar ? <BarContainer /> : null }
                         {this.state.appetizers ? <Appetizers /> : null }

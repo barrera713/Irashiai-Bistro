@@ -1,6 +1,7 @@
 import React from 'react';
 import { Footer } from './Footer';
 import MenuContainer from './MenuContainer';
+import About from './About';
 
 class Home extends React.Component {
 
@@ -8,7 +9,6 @@ class Home extends React.Component {
     render() {
 
         return(
-
             <div className="main-container">
                     <div className="hours-container">
                         <div className="hours-header">
@@ -45,20 +45,10 @@ class Home extends React.Component {
                         </ul>
                     </div>
                 <div>
-                    <MenuContainer />
                 </div>
-                <div className="about-section">
-                    <h3>About</h3>
-                    <ul>
-                        <li>
-                            <img src='/mimi-kansan.jpg' alt=''/>
-                        </li>
-                        <li>
-                            <p>This is the writing section</p>
-                        </li>
-                    </ul>
-                </div>
-                <Footer/>
+                <MenuContainer />
+                <About />
+                <Footer />
             </div>
         )
     }

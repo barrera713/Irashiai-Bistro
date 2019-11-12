@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* overflow: hidden; */
 }
 
 ul {
@@ -28,11 +27,6 @@ body {
   margin: 0 auto; 
   width: 100vw;
   height: 100vh;
-}
-
-.menu-container {
-  max-height: 300px;
-  overflow: scroll;
 }
 
 
@@ -74,6 +68,10 @@ body {
   background-color: #B71001; 
   color: white;
 }
+
+/* NavBar End  */
+
+/* Page Links Start  */
 
 .page-links-container {
   background-color: black;
@@ -123,6 +121,7 @@ body {
 }
 
 
+/* Page Links Ends  */
 
 
 
@@ -138,7 +137,7 @@ body {
 } */
 
 
-.fa-facebook {
+/* .fa-facebook {
   color: white;
 }
 
@@ -148,9 +147,7 @@ body {
 
 .glyphicon-envelope {
   color: white
-}
-
-/* NavBar end  */
+} */
 
 
 /* Image Carousel Start  */
@@ -169,13 +166,30 @@ body {
 
 
 .img-container {
-  max-height: 500px;
-  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-height: 600px;
+  margin: 10px 0;
   overflow: auto;
 }
 
 
+.img-container ul {
+  margin: 0;
+  padding: 0;
+} 
+
+
+.img-container li {
+  list-style: none;
+  margin: 5px;
+}
+
+
 .img-container img {
+  width: 60%;
+  object-fit: cover;
+  margin: 10px 0;
   box-shadow : 0px 10px 15px 0px rgba(0, 0, 0, 0.801);
   margin-bottom: 10px;
   opacity: .9;
@@ -188,15 +202,6 @@ body {
   opacity: 1;
 }
 
-.img-container ul {
-  margin: 0;
-  padding: 0;
-} 
-
-.img-container li {
-  list-style: none;
-  margin: 5px;
-}
 
 
 /* Image Carousel End  */
@@ -204,14 +209,6 @@ body {
 
 
 /* Opening Hours Start */
-
-.section-b {
-  /* max-width: 900px; */
-  margin: 0 auto;
-  font-size: 1.1em;
-  letter-spacing: 1px;
-}
-
 
 .hours-container {
   padding: 75px;
@@ -252,41 +249,53 @@ body {
 /* Opening Hours End  */
 
 
-/* Menu  */
+/* Menu Section  */
+
+.menu-section {
+  max-height: 600px;
+  padding: 75px 0;
+  background: green;
+}
 
 .menu-log-container {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1;
+  background-color: yellow;
 }
 
-
-.menu-log {
-  justify-content: center;
-  background: #B71001;
+.selected-category {
+  height: 100%;
+  background: white;
 }
 
-
-.menu-container {
-  /* max-height: 500px; */
-  overflow: scroll;
-}
-
-
-.menu-log li {
+.menu-log-container li {
   list-style: none;
   display: inline-block;
-  font-family: 'Alice', serif;
+  font-family: "Helvetica Neue", sans-serif;
   cursor: pointer;
   margin: 24px;
   font-size: 16px;
-  font-weight: 450;
+  font-weight: 500;
 }
 
-.menu-log li:hover {
-  color: white;
+
+.menu-log-container li:hover {
+  color: rgb(94, 94, 94);
   cursor: pointer;
+} 
+
+.menu-items {
+  max-height: 450px;
+  width: 100%;
+  overflow: auto;
+}
+
+.category-container {
+  background: red;
+}
+
+.category-header {
+  font-size: 24px;
+  font-weight: 350;
+  padding-bottom: 20px;
 }
 
 
@@ -294,7 +303,7 @@ body {
   font-weight: 500;
   font-size: 28px;
   padding: 20px;
-  font-family: 'Alice', serif;
+  font-family: "Helvetica Neue", sans-serif;
   font: bold;
   letter-spacing: 7px;
 }
@@ -303,7 +312,7 @@ body {
   font-weight: 500;
   font-size: 24px;
   padding: 18px;
-  font-family: 'Alice', serif;
+  font-family: "Helvetica Neue", sans-serif;
   font: bold;
   letter-spacing: 7px;
 }
@@ -312,14 +321,14 @@ body {
   font-weight: 500;
   font-size: 18px;
   padding: 16px;
-  font-family: 'Alice', serif;
+  font-family: "Helvetica Neue", sans-serif;
   font: bold;
   letter-spacing: 7px;
 }
 
 
 .menu-items p {
-  font-family: 'Alice', serif;
+  font-family: "Helvetica Neue", sans-serif;
   letter-spacing: 2px;
   padding: 7px;
   font-size: 16px;
@@ -329,7 +338,7 @@ body {
 }
 
 .bar-cat li {
-  font-family: 'Alice', serif;
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 18px;
   font-weight: 500;
   padding: 12px;
@@ -346,15 +355,9 @@ body {
 }
 
 .bar-cat h4 {
-  font-family: 'Alice', serif;
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 18px;
   font-weight: 500;
-}
-
-/* Menu Section  */
-
-.menu-section {
-  padding: 75px 0;
 }
 
 
@@ -366,6 +369,7 @@ body {
 /* About section */
 
 .about-section {
+  max-height: 750px;
   padding: 75px 0;
 }
 
@@ -405,10 +409,9 @@ body {
   list-style: none;
   justify-content: center;
   width: 100%;
+  position: sticky;
   margin: 0 auto;
-  position: static;
   left: 0;
-  bottom: 0;
   right: 0;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 500;
