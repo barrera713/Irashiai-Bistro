@@ -1,116 +1,15 @@
 import React from 'react';
 import { Footer } from './Footer';
-import { About } from './About';
-// import Dessert from '../Menu/Dessert';
-// import BarContainer from '../Menu/Bar/BarContainer';
-// import Appetizers from '../Menu/Appetizers';
-// import Lunch from '../Menu/Lunch';
-// import Dinner from '../Menu/Dinner';
-// import Specialty from '../Menu/Specialty';
-
+import MenuContainer from './MenuContainer';
 
 class Home extends React.Component {
 
-    state = {
-        dessert: false,
-        bar: false, 
-        appetizers: false, 
-        lunch: false,
-        dinner: false,
-        specialty: false
-    }
-
-
-    handleDessert = (e) => {
-        this.setState({
-            dinner: false,
-            specialty: false,
-            lunch: false,
-            bar: false,
-            appetizers: false,
-            dessert: !this.state.dessert 
-        })
-    }
-
-    handleBar = (e) => {
-        this.setState({ 
-            dinner: false,
-            specialty: false,
-            lunch: false,
-            dessert: false,
-            appetizers: false,
-            bar: !this.state.bar
-        })
-    }
-
-    handleAppetizers = (e) => {
-        this.setState({
-            dinner: false,
-            specialty: false,
-            lunch: false,
-            dessert: false,
-            appetizers: !this.state.appetizers,
-            bar: false
-        })
-    }
-
-    handleLunch = (e) => {
-        this.setState({
-            dinner: false,
-            specialty: false,
-            dessert: false,
-            appetizers: false,
-            bar: false,
-            lunch: !this.state.lunch
-        })
-    }
-
-    handleDinner = (e) => {
-        this.setState({
-            dinner: !this.state.dinner,
-            specialty: false,
-            dessert: false,
-            appetizers: false,
-            bar: false,
-            lunch: false
-        })
-    }
-
-    handleSpecialty = (e) => {
-        this.setState({
-            dinner: false,
-            dessert: false,
-            appetizers: false,
-            bar: false,
-            lunch: false,
-            specialty: !this.state.specialty
-        })
-    }
 
     render() {
 
         return(
 
-            <div>
-                <div className="section-b">
-                {/* <div className="menu-log-container">
-                    <ul className="menu-log">
-                        <li onClick={this.handleAppetizers}>Kitchen</li>
-                        <li onClick={this.handleBar}>Bar</li>
-                        <li onClick={this.handleLunch}>Lunch</li>
-                        <li onClick={this.handleDinner}>Dinner</li>
-                        <li onClick={this.handleDessert}>Dessert</li>
-                        <li onClick={this.handleSpecialty}>Specials</li>
-                    </ul>
-                    <div className="menu-container">
-                        {this.state.dessert ? <Dessert /> : null }
-                        {this.state.bar ? <BarContainer /> : null }
-                        {this.state.appetizers ? <Appetizers /> : null }
-                        {this.state.lunch ? <Lunch /> : null }
-                        {this.state.dinner ? <Dinner /> : null }
-                        {this.state.specialty ? <Specialty /> : null }
-                    </div>
-                </div>  */}
+            <div className="main-container">
                     <div className="hours-container">
                         <div className="hours-header">
                             <h3>Hours and Location</h3>
@@ -126,26 +25,38 @@ class Home extends React.Component {
                             <li>Sunday: Closed</li>
                         </ul>
                     </div>
-                <div >
-                    <ul className="img-container">
+                    <div>
+                        <ul className="img-container">
+                            <li>
+                                <img src='/entree.jpg' alt=''></img>
+                            </li>
+                            <li>
+                                <img src='/steak-onions.jpg' alt=''></img>
+                            </li>
+                            <li>
+                                <img src='/fish.jpg' alt=''></img>
+                            </li>
+                            <li>
+                                <img src='/roll-2.jpg' alt=''></img>
+                            </li>
+                            <li>
+                                <img src='/roll-3.jpg' alt=''></img>
+                            </li>
+                        </ul>
+                    </div>
+                <div>
+                    <MenuContainer />
+                </div>
+                <div className="about-section">
+                    <h3>About</h3>
+                    <ul>
                         <li>
-                            <img src='/roll-2.jpg' alt=''></img>
+                            <img src='/mimi-kansan.jpg' alt=''/>
                         </li>
                         <li>
-                            <img src='/steak-onions.jpg' alt=''></img>
-                        </li>
-                        <li>
-                            <img src='/fish.jpg' alt=''></img>
-                        </li>
-                        <li>
-                            <img src='/entree.jpg' alt=''></img>
-                        </li>
-                        <li>
-                            <img src='/roll-3.jpg' alt=''></img>
+                            <p>This is the writing section</p>
                         </li>
                     </ul>
-                </div>
-                <About />
                 </div>
                 <Footer/>
             </div>

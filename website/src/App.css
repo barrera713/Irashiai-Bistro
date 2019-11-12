@@ -30,6 +30,10 @@ body {
   height: 100vh;
 }
 
+.menu-container {
+  max-height: 300px;
+  overflow: scroll;
+}
 
 
 /* NavBar start */
@@ -106,7 +110,7 @@ body {
 
 .page-links a {
   text-transform: uppercase;
-  transition:color 0.25s ease;
+  transition:color 0.5s ease;
   color: white;
 }
 
@@ -163,34 +167,26 @@ body {
   margin: 0;
 }
 
+
 .img-container {
   max-height: 500px;
   margin: 0 auto;
-  /* background-color: #FFFF8B; */
-  overflow: scroll;
+  overflow: auto;
 }
+
 
 .img-container img {
   box-shadow : 0px 10px 15px 0px rgba(0, 0, 0, 0.801);
-  /* margin: 10px; */
   margin-bottom: 10px;
+  opacity: .9;
+  transition-property: opacity;
+  transition-duration: 0.6s;
 }
 
 
 .img-container li img:hover {
-  box-shadow : 0px 10px 15px 0px #B71001;
+  opacity: 1;
 }
-
-/* .img-container li:hover + li img {
-  -webkit-animation-name: slightRight; 
-  -webkit-animation-duration: 1.5s;
-  -webkit-animation-fill-mode: forwards;
-
-  animation-name: slideRight;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-}  */
-
 
 .img-container ul {
   margin: 0;
@@ -198,7 +194,6 @@ body {
 } 
 
 .img-container li {
-  /* width: 50%; */
   list-style: none;
   margin: 5px;
 }
@@ -219,21 +214,27 @@ body {
 
 
 .hours-container {
-  margin: 75px;
+  padding: 75px;
 }
 
 .hours-header {
-  font-family: "Helvetica Neue", sans-serif;
-  font-size: 14px;
+  font-family: 'Alice', serif;
+  letter-spacing: 1px;
   padding: 10px;
 }
 
+
 .hours-header h3 {
+  font-size: 24px;
+  font-weight: 350;
   padding-bottom: 20px;
 }
 
 .hours-header a {
   color: rgb(94, 94, 94);
+  font-size: 16px;
+  font-weight: 350;
+  padding-bottom: 20px;
 }
 
 .hours-header a:hover {
@@ -246,6 +247,7 @@ body {
   font-size: 14px;
   font-family: 'Source Serif Pro', serif;
 }
+
 
 /* Opening Hours End  */
 
@@ -267,7 +269,7 @@ body {
 
 
 .menu-container {
-  max-height: 500px;
+  /* max-height: 500px; */
   overflow: scroll;
 }
 
@@ -349,15 +351,46 @@ body {
   font-weight: 500;
 }
 
+/* Menu Section  */
+
+.menu-section {
+  padding: 75px 0;
+}
+
+
+/* Menu Section End  */
+
+
+
 
 /* About section */
+
 .about-section {
-  margin: 50px;
+  padding: 75px 0;
+}
+
+.about-section li {
+  display: inline-block;
 }
 
 .about-section h3 {
   font-family: "Helvetica Neue", sans-serif;
-  font-size: 18px;
+  letter-spacing: 4px;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.about-section img {
+  width: 350px;
+  height: auto;
+  box-shadow : 0px 10px 15px 0px rgba(0, 0, 0, 0.801);
+}
+
+.about-section p {
+  margin: 65px;
+  font-size: 16px;
+  font-family: "Helvetica Neue", sans-serifs;
+  font-weight: 350;
 }
 
 /* About section end */
