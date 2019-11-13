@@ -5,6 +5,8 @@ function Appetizers() {
 
     return(<div className="menu-items">
     <div className="category-container">
+        <ul className="category-section">
+        <li>
             <div className="category-header">
                 <h2>Starters</h2>
             </div>
@@ -14,11 +16,11 @@ function Appetizers() {
             <h3>Dragon Pork Tenderloin</h3>
             <p>Panko fried tossed with Sweet Chili sauce.</p>
             <p>7.5</p>
-            <h3>Edamame(Soybean): Salted</h3>
+            <h3>Edamame: Salted</h3>
             <p>4.95</p>
-            <h3>Edamame(Soybean): Garlic Butter Yaki</h3>
+            <h3>Edamame: Garlic Butter Yaki</h3>
             <p>5.95</p>
-            <h3>Edamame(Soybean): Spicy Garlic Butter Yaki</h3>
+            <h3>Edamame: Spicy Garlic Butter Yaki</h3>
             <p>5.95</p>
             <h3>Gyoza(Pork dumplings): Steam, Pan or Deep Fry</h3>
             <p>5.5</p>
@@ -71,18 +73,10 @@ function Appetizers() {
             <h3>Zucchini Chips</h3>
             <p>Panko fried Zucchini, spicy hawaiian sauce.</p>
             <p>5.95</p>
-        </div>
-        <div className="category-container">
-        <div className="category-header">
-                <h2>Kid's Menu</h2>
-            </div>
-            <p>Chicken Teriyaki with Veggies</p>
-            <p>Chicken Katsu Nuggets</p>
-            <p>Chicken Tenpura Nuggets</p>
-            <p>6.95</p>
-        </div>
-        <div className="category-container">
-        <div className="category-header">
+            <hr></hr>
+        </li>
+        <li>
+            <div className="category-header">
                 <h2>Daidokoro</h2>
             </div>
             <p>Served with Miso Soup, House Salad and Steam Rice.</p>
@@ -94,9 +88,10 @@ function Appetizers() {
             <p>Panko fried tossed with Sweet Chili sauce.</p>
             <h3>Yaki Soba/ Yaki Udon/Fried Rice</h3>
             <p>Sautéed with veggies in sweet savory sauce.</p>
-        </div>
-        <div className="category-container">
-        <div className="category-header">
+            <hr></hr>
+        </li>
+        <li>
+            <div className="category-header">
                 <h2>Bento</h2>
             </div>
             <p>Served with Miso Soup, House Salad creamy potato Salad, Veggie Spring Roll, Banana and Oreo Tenpura and steamed Rice</p>
@@ -125,8 +120,9 @@ function Appetizers() {
             <h3>Salmon</h3>
             <p>Lunch 10.95</p>
             <p>Dinner 13.95</p>
-        </div>
-        <div className="category-container">
+            <hr></hr>
+        </li>
+        <li>
             <div className="category-header">
                 <h2>Soups</h2>
             </div>
@@ -163,8 +159,19 @@ function Appetizers() {
             <h3>Chanpon</h3>
             <p>Eggnoodles, Veggies and Assorted Seafood in spicy Seafood Broth.</p>
             <p>14.95</p>
-        </div>
-        <div className="category-container">
+            <hr></hr>
+        </li>
+        <li>
+            <div className="category-header">
+                <h2>Kid's Menu</h2>
+            </div>
+            <p>Chicken Teriyaki with Veggies</p>
+            <p>Chicken Katsu Nuggets</p>
+            <p>Chicken Tenpura Nuggets</p>
+            <p>6.95</p>
+            <hr></hr>
+        </li>
+        <li>
             <div className="category-header">
                 <h2>Rice Bowls</h2>
             </div>
@@ -183,8 +190,9 @@ function Appetizers() {
             <h3>Mama's Chicken Curry Rice</h3>
             <p>Mama's famous Curry is made on Thursday afternoon until sold out.</p>
             <p>11.95</p>
-        </div>
-        <div className="category-container">
+            <hr></hr>
+        </li>
+        <li>
             <div className="category-header">
                 <h2>Sushi Donburi</h2>
             </div>
@@ -201,8 +209,9 @@ function Appetizers() {
             <h3>*Chirashi Sushi</h3>
             <p>Topped with Assorted Sashimi</p>
             <p>19.95</p>
-        </div>
-        <div className="category-container">
+            <hr></hr>
+        </li>
+        <li>
             <div className="category-header">
                 <h2>Sushi Bar</h2>
             </div>
@@ -270,10 +279,9 @@ function Appetizers() {
             <h3>Unagi</h3>
             <p>Nigiri 2.5</p>
             <p>Sashimi 5</p>
-            <h3>*Uni</h3>
-            <p>Nigiri MKT</p>
-            <p>Sashimi MKT</p>
-        </div>
+        </li>
+    </ul>
+    </div>
         <h5>* Consuming raw or undercooked food meats, poultry, seafood, or eggs may increase your risk of foodborne illness, especially if you have certain medical conditions.</h5>
     </div>)
 

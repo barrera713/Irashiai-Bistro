@@ -1,7 +1,8 @@
 import React from 'react'
 import Dessert from '../Menu/Dessert';
 import BarContainer from '../Menu/Bar/BarContainer';
-import Appetizers from '../Menu/Appetizers';
+// import Appetizers from '../Menu/Appetizers';
+import Kitchen from '../Menu/Kitchen';
 import Lunch from '../Menu/Lunch';
 import Dinner from '../Menu/Dinner';
 import Specialty from '../Menu/Specialty';
@@ -13,7 +14,7 @@ export default class MenuContainer extends React.Component {
     state = {
         dessert: false,
         bar: false, 
-        appetizers: true, 
+        kitchen: true, 
         lunch: false,
         dinner: false,
         specialty: false
@@ -26,7 +27,7 @@ export default class MenuContainer extends React.Component {
             specialty: false,
             lunch: false,
             bar: false,
-            appetizers: false,
+            kitchen: false,
             dessert: !this.state.dessert 
         })
     }
@@ -37,18 +38,18 @@ export default class MenuContainer extends React.Component {
             specialty: false,
             lunch: false,
             dessert: false,
-            appetizers: false,
+            kitchen: false,
             bar: !this.state.bar
         })
     }
 
-    handleAppetizers = (e) => {
+    handleKitchen = (e) => {
         this.setState({
             dinner: false,
             specialty: false,
             lunch: false,
             dessert: false,
-            appetizers: !this.state.appetizers,
+            kitchen: true,
             bar: false
         })
     }
@@ -58,7 +59,7 @@ export default class MenuContainer extends React.Component {
             dinner: false,
             specialty: false,
             dessert: false,
-            appetizers: false,
+            kitchen: false,
             bar: false,
             lunch: !this.state.lunch
         })
@@ -69,7 +70,7 @@ export default class MenuContainer extends React.Component {
             dinner: !this.state.dinner,
             specialty: false,
             dessert: false,
-            appetizers: false,
+            kitchen: false,
             bar: false,
             lunch: false
         })
@@ -79,7 +80,7 @@ export default class MenuContainer extends React.Component {
         this.setState({
             dinner: false,
             dessert: false,
-            appetizers: false,
+            kitchen: false,
             bar: false,
             lunch: false,
             specialty: !this.state.specialty
@@ -93,26 +94,25 @@ export default class MenuContainer extends React.Component {
         return(<div>
             <div>
                 <div className="menu-log-container">
-                    <ul>
-                        <li onClick={this.handleAppetizers}>Kitchen</li>
-                        <li onClick={this.handleBar}>Bar</li>
-                        <li onClick={this.handleLunch}>Lunch</li>
-                        <li onClick={this.handleDinner}>Dinner</li>
-                        <li onClick={this.handleDessert}>Dessert</li>
-                        <li onClick={this.handleSpecialty}>Specials</li>
-                    </ul>
-                    <div className="selected-category">
-                        {this.state.dessert ? <Dessert /> : null }
-                        {this.state.bar ? <BarContainer /> : null }
-                        {this.state.appetizers ? <Appetizers /> : null }
-                        {this.state.lunch ? <Lunch /> : null }
-                        {this.state.dinner ? <Dinner /> : null }
-                        {this.state.specialty ? <Specialty /> : null }
-                    </div>
-                </div> 
-            </div>
+                <ul>
+                    <li onClick={this.handleKitchen}>Kitchen</li>
+                    <li onClick={this.handleBar}>Bar</li>
+                    <li onClick={this.handleLunch}>Lunch</li>
+                    <li onClick={this.handleDinner}>Dinner</li>
+                    <li onClick={this.handleDessert}>Dessert</li>
+                    <li onClick={this.handleSpecialty}>Specials</li>
+                </ul>
+                </div>
+                <div className="selected-category">
+                    {this.state.dessert ? <Dessert /> : null }
+                    {this.state.bar ? <BarContainer /> : null }
+                    {this.state.kitchen ? <Kitchen /> : null }
+                    {this.state.lunch ? <Lunch /> : null }
+                    {this.state.dinner ? <Dinner /> : null }
+                    {this.state.specialty ? <Specialty /> : null }
+                </div>
+            </div> 
         </div>)
-
     }
 
 }

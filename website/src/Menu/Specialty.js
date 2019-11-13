@@ -5,6 +5,7 @@ function Specialty() {
 
     return(<div className="menu-items">
         <div className="category-container">
+        <div className="category-section">
             <div className="category-header">
                 <h2>Maki Rolls</h2>
             </div>
@@ -62,7 +63,7 @@ function Specialty() {
             <h3>*Hot Texas</h3>
             <p>Softshell crab tenpura, spicy mayo, masago topped w/tuna & yellowtail, salmon, avocado.</p>
             <p>13.95</p>
-            <h3>*FIT</h3>
+            {/* <h3>*FIT</h3>
             <p>California top w/ tuna.</p>
             <p>8.95</p>
             <h3>*Negihama</h3>
@@ -75,7 +76,8 @@ function Specialty() {
             <p>Salmon</p>
             <p>4.95</p>
             <h3>Shrimp Tenpura</h3>
-            <p>5.95</p>
+            <p>5.95</p> */}
+            </div>
         </div>
         <h5>* Consuming raw or undercooked food meats, poultry, seafood, or eggs may increase your risk of foodborne illness, especially if you have certain medical conditions.</h5>
     </div>)
