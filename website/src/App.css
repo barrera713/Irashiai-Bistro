@@ -150,6 +150,9 @@ body {
   color: white
 } */
 
+.main-container {
+  font-family: "Helvetica Neue", sans-serif;
+}
 
 /* Opening Hours Start */
 
@@ -157,22 +160,16 @@ body {
   padding: 75px;
 }
 
-.hours-header {
-  font-family: 'Alice', serif;
-  letter-spacing: 1px;
-  padding: 10px;
-}
-
 
 .hours-header h3 {
-  font-size: 24px;
-  font-weight: 350;
+  font-size: 28px;
+  font-weight: 300;
   padding-bottom: 20px;
 }
 
 .hours-header a {
   color: rgb(94, 94, 94);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 350;
   padding-bottom: 20px;
 }
@@ -184,8 +181,7 @@ body {
 .hours-container li {
   list-style: none;
   padding: 16px 0;
-  font-size: 14px;
-  font-family: 'Source Serif Pro', serif;
+  font-size: 16px;
 }
 
 
@@ -275,6 +271,7 @@ body {
 
 .selected-category {
   height: 100%;
+  padding: 20px;
 }
 
 
@@ -378,21 +375,42 @@ body {
 
 .about-section {
   font-family: "Helvetica Neue", sans-serifs;
-  background: red;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 
-.about-section img {
-  width: 500px;
+.about-img h1 {
+  font-size: 42px;
+  font-weight: 300;
+  padding: 30px;
+  letter-spacing: 18px;
+}
+
+.about-img img {
+  max-width: 450px;
   height: auto;
   box-shadow : 0px 10px 15px 0px rgba(0, 0, 0, 0.801);
 }
 
-.about-p-container {
+.about-content {
+  width: 70%;
+  margin-top: 20px;
+  padding: 50px;
   font-size: 16px;
-  width: 400px;
+  letter-spacing: 1px;
 }
+
+.about-content p {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+
+
+
+
 
 /* About section end */
 
@@ -553,37 +571,13 @@ tr:hover {background-color:#f5f5f5;}
   }
 
   .about-section {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-  } 
-
-  .about-section li {
-    display: inline-block;
+    display: flex;
   }
 
-  .about-section img {
-    padding: 0;
-    width: 100%;
+  .about-img img {
+    max-width: 100%;
     height: auto;
-    box-shadow : 0px 10px 15px 0px rgba(0, 0, 0, 0.801);
   }
-
-  .about-p-container {
-    padding: 10px;
-    width: 100%;
-    margin: 0;
-    background-color: yellow;
-  }  
-  
-  .about-section p {
-    font-size: 16px;
-    font-family: "Helvetica Neue", sans-serifs;
-    font-weight: 320;
-    letter-spacing: .5px;
-    padding: 50px;
-    width: 100%;
-  } 
 
 
 }
