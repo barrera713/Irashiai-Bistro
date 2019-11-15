@@ -368,6 +368,11 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  -webkit-animation-name: slideUp;
+  -webkit-duration: 1s;
+  animation-name: slideUp;
+  animation-duration: 1s;
 }
 
 
@@ -488,7 +493,12 @@ body {
 
 .form-container {
   justify-content: center;
+  padding: 50px;
   margin-bottom: 50px;
+  -webkit-animation-name: slideUp;
+  -webkit-duration: 1s;
+  animation-name: slideUp;
+  animation-duration: 1s;
 }
 
 .form-container h1 {
@@ -660,7 +670,7 @@ tr:hover {background-color:#f5f5f5;}
 
 @-webkit-keyframes opacityLinks {
   0% { opacity: 0; }
-  50% { color: #B71001; }
+  10% { opacity: 0; }
   100% { opacity: 1; }
 }
 
@@ -668,7 +678,7 @@ tr:hover {background-color:#f5f5f5;}
 
 @keyframes opacityLinks {
   0% { opacity: 0;}
-  50% { color: #B71001; }
+  10% { opacity: 0; }
   100% { opacity: 1;}
 }
 

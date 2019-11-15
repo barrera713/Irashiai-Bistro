@@ -1,5 +1,4 @@
 import React from 'react';
-import { Footer } from './Footer';
 import MenuContainer from './MenuContainer';
 import About from './About';
 
@@ -55,7 +54,6 @@ class Home extends React.Component {
                 </div>
                 <MenuContainer />
                 <About />
-                <Footer />
             </div>
         )
     }
