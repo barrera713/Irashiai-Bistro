@@ -139,15 +139,15 @@ body {
 .hours-header h3 {
   font-size: 28px;
   font-weight: 300;
-  padding-bottom: 20px;
 }
 
 .hours-header a {
   color: rgb(94, 94, 94);
   font-size: 18px;
   font-weight: 350;
-  padding-bottom: 20px;
+  padding: 20px;
 }
+
 
 .hours-header a:hover {
   color: black;
@@ -155,7 +155,7 @@ body {
 
 .hours-container li {
   list-style: none;
-  padding: 16px 0;
+  padding: 10px 0;
   font-size: 15px;
 }
 
@@ -233,7 +233,7 @@ body {
   font-family: "Helvetica Neue", sans-serif;
   cursor: pointer;
   margin: 24px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -245,7 +245,6 @@ body {
 
 .selected-category {
   height: 100%;
-  /* padding: 20px; */
   margin: 10px;
 }
 
@@ -253,11 +252,14 @@ body {
 .menu-items {
   width: 100%;
   border-top-style: double;
+  animation-name: slideUp;
+  animation-duration: 1.2s;
+  -webkit-animation-name: slideUp;
+  -webkit-animation-duration: 1.2s;
 } 
 
 
 .category-section {
- /* background-color: green; */
  max-height: 750px;
  overflow: auto;
  display: block;
@@ -289,7 +291,6 @@ body {
   font-weight: 500;
   font-size: 24px;
   padding: 18px;
-  font-family: "Helvetica Neue", sans-serif;
   font: bold;
   letter-spacing: 7px;
   font-size: 24px;
@@ -298,7 +299,6 @@ body {
 }
 
 .category-section h3 {
-  font-family: "Helvetica Neue", sans-serif;
   font-weight: 430;
   font-size: 18px;
   letter-spacing: 1px;
@@ -306,7 +306,6 @@ body {
 }
 
 .category-section p {
-  font-family: "Helvetica Neue", sans-serif;
   letter-spacing: 1px;
   font-size: 16px;
   margin: 0 auto;
@@ -314,11 +313,14 @@ body {
   word-wrap: break-word;
 }
 
-
-
+.bar-cat {
+  animation-name: slideUp;
+  animation-duration: 1s;
+  -webkit-animation-name: slideUp;
+  -webkit-animation-duration: 1.2s;
+}
 
 .bar-cat li {
-  font-family: "Helvetica Neue", sans-serif;
   font-size: 18px;
   font-weight: 500;
   padding: 12px;
@@ -329,15 +331,19 @@ body {
   font-weight: 600;
 }
 
+
 .bar-cat h3 {
-  font-size: 20px;
-  font-weight: 550;
+  padding: 10px;
+  letter-spacing: 4px;
 }
 
-.bar-cat h4 {
-  font-family: "Helvetica Neue", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
+.bar-cat p {
+  padding: 2px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  margin: 0 auto;
+  width: 350px;
+  word-wrap: break-word;
 }
 
 
@@ -431,7 +437,7 @@ body {
 .social-links {
   flex: 1;
   list-style: none;
-  padding: 20px;
+  padding: 30px;
 }
 
 .social-links ul {
@@ -445,7 +451,7 @@ body {
 
 .contact-info {
   flex: 2;
-  padding: 20px;
+  padding: 30px;
 }
 
 .contact-info ul {
@@ -454,7 +460,7 @@ body {
 
 .contact-info a {
   transition:color 0.25s ease;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
 }
 
@@ -612,16 +618,14 @@ tr:hover {background-color:#f5f5f5;}
 
 /* Safari 4.0 - 8.0 */
 
-@-webkit-keyframes slideRight {
-  0%{ transform: translateX(-1000px); }
-  /* 50%, 70%{ transform: translateX(2000px); } */
+@-webkit-keyframes slideUp {
+  0%{ transform: translateY(1000px); }
   100% { transform: translateY(0px);}
 }
 
 /* Standard syntax */
 
-@keyframes slideRight {
-  0% { transform: translateX(-1000px); }
-  /* 50%, 70%{ transform: translateX(2000px); } */
+@keyframes slideUp {
+  0% { transform: translateY(1000px); }
   100% { transform: translateY(0px);}
 }

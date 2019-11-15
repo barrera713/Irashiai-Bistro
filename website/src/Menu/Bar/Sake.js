@@ -13,19 +13,19 @@ function Sake() {
             <p>Small: 3.5</p> 
             <p>Large: 7</p>
             <h3>Cold Premium Sake</h3>
-            <h2>Nigori</h2>
-            <h4>Bottle</h4>
+            <h3>Nigori</h3>
+            <p>Bottle</p>
             <p>11</p>
-            <h2>Ginjo</h2>
-            <h4>Bottle</h4>
+            <h3>Ginjo</h3>
+            <p>Bottle</p>
             <p>12.5</p>
-            <h2>Mango</h2>
-            <h4>Bottle</h4>
+            <h3>Mango</h3>
+            <p>Bottle</p>
             <p>12.5</p>
-            <h4>Glass</h4>
+            <p>Glass</p>
             <p>4.5</p>
-            <h2>Bunraku</h2>
-            <h4>Bottle</h4>
+            <h3>Bunraku</h3>
+            <p>Bottle</p>
             <p>14.95</p>
         </div>
     </div>)
