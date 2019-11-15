@@ -95,12 +95,12 @@ export default class MenuContainer extends React.Component {
             <div>
                 <div className="menu-log-container">
                 <ul>
-                    <li onClick={this.handleKitchen}>Kitchen</li>
-                    <li onClick={this.handleBar}>Bar</li>
-                    <li onClick={this.handleLunch}>Lunch</li>
-                    <li onClick={this.handleDinner}>Dinner</li>
-                    <li onClick={this.handleDessert}>Dessert</li>
-                    <li onClick={this.handleSpecialty}>Specials</li>
+                    <li onClick={this.handleKitchen} className="select-li">Kitchen</li>
+                    <li onClick={this.handleBar} className="select-li">Bar</li>
+                    <li onClick={this.handleLunch} className="select-li">Lunch</li>
+                    <li onClick={this.handleDinner} className="select-li">Dinner</li>
+                    <li onClick={this.handleDessert} className="select-li">Dessert</li>
+                    <li onClick={this.handleSpecialty} className="select-li">Specials</li>
                 </ul>
                 </div>
                 <div className="selected-category">

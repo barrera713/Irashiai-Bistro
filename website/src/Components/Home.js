@@ -50,8 +50,6 @@ class Home extends React.Component {
                             </li>
                         </ul>
                     </div>
-                <div>
-                </div>
                 <MenuContainer />
                 <About />
             </div>

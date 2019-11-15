@@ -38,7 +38,7 @@ class Reservation extends React.Component {
            }
         }
         console.log('Inside submit', formData)
-        this.props.postReservation(formData)
+        // this.props.postReservation(formData)
     };
 
     handleClick = () => {

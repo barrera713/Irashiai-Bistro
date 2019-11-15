@@ -28,6 +28,12 @@ body {
   margin: 0 auto; 
   width: 100vw;
   height: 100vh;
+
+
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 
@@ -61,11 +67,12 @@ body {
 }
 
 .nav-container h3 {
-  font-size: 24px;
-  font-family: 'Alice', serif;
+  font-size: 40px;
+  font-family: 'Bebas Neue', sans-serif;
   text-transform: capitalize;
   color: #B71001;
-  letter-spacing: 8px;
+  letter-spacing: 4px;
+  font-weight: 800;
 }
 
 
@@ -232,39 +239,42 @@ body {
 /* Menu Section  */
 
 .menu-log-container {
-  margin: 50px 0;
-  background-color: beige;
+  margin: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  overflow: hidden;
 }
+
 
 .menu-log-container li {
   list-style: none;
-  display: inline-block;
-  font-family: "Helvetica Neue", sans-serif;
-  cursor: pointer;
+  display: inline-flex;
   margin: 24px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 4px;
+  font-weight: light;
+  padding: 5px;
 }
 
 
-.menu-log-container li:hover {
-  color: rgb(94, 94, 94);
+.select-li:hover {
   cursor: pointer;
+  color: #B71001;
 } 
 
 .selected-category {
   height: 100%;
-  margin: 10px;
 }
 
 
 .menu-items {
   width: 100%;
-  border-top-style: double;
+  border-top: 7px double;
+  border-bottom: 7px double;
   animation-name: slideUp;
-  animation-duration: 1.2s;
+  animation-duration: 1s;
   -webkit-animation-name: slideUp;
-  -webkit-animation-duration: 1.2s;
+  -webkit-animation-duration: 1s;
 } 
 
 
@@ -323,18 +333,47 @@ body {
 }
 
 .bar-cat {
-  animation-name: slideUp;
-  animation-duration: 1s;
-  -webkit-animation-name: slideUp;
-  -webkit-animation-duration: 1.2s;
+  display: inline-flex;
+  flex-direction: column;
 }
 
 .bar-cat li {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   padding: 12px;
   cursor: pointer;
+  letter-spacing: 2px;
+  list-style: none;
 }
+
+.bar-cat li:nth-child(1) {
+  animation-name: slideRight;
+  animation-duration: 1s;
+  -webkit-animation-name: slideRight;
+  -webkit-animation-duration: 1s;
+}
+
+.bar-cat li:nth-child(2) {
+  animation-name: slideRight;
+  animation-duration: 1.2s;
+  -webkit-animation-name: slideRight;
+  -webkit-animation-duration: 1.2s;
+}
+
+.bar-cat li:nth-child(3) {
+  animation-name: slideRight;
+  animation-duration: 1.4s;
+  -webkit-animation-name: slideRight;
+  -webkit-animation-duration: 1.4s;
+}
+
+.bar-cat li:nth-child(4) {
+  animation-name: slideRight;
+  animation-duration: 1.8s;
+  -webkit-animation-name: slideRight;
+  -webkit-animation-duration: 1.8s;
+}
+
 
 .bar-cat li:hover {
   font-weight: 600;
@@ -364,7 +403,6 @@ body {
 /* About section */
 
 .about-section {
-  font-family: "Helvetica Neue", sans-serifs;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -377,10 +415,12 @@ body {
 
 
 .about-img h1 {
-  font-size: 42px;
+  font-size: 38px;
   font-weight: 300;
   padding: 30px;
   letter-spacing: 18px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 300;
 }
 
 .about-img img {
@@ -442,6 +482,10 @@ body {
   background: black;
   font-size: 18px;
   text-transform: uppercase;
+  -webkit-animation-name: slideUp;
+  -webkit-animation-duration: 1s;
+  animation-name: slideUp;
+  animation-duration: 1s;
 }
 
 .footer-container a:hover {
@@ -494,7 +538,7 @@ body {
 .form-container {
   justify-content: center;
   padding: 50px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   -webkit-animation-name: slideUp;
   -webkit-duration: 1s;
   animation-name: slideUp;
@@ -510,11 +554,10 @@ body {
 }
 
 .res-form label {
-  width: 60%;
+  width: 100%;
 }
 
 .res-form input {
-  border-color: blue;
   width: 60%;
   height: 40px;
   border-radius: 10px;
@@ -527,7 +570,7 @@ body {
 }
 
 .res-form button {
-  font-size: 10px;
+font-size: 10px;
  letter-spacing: 4px;
  background-color: #B71001;
  color: black;
@@ -635,22 +678,27 @@ tr:hover {background-color:#f5f5f5;}
 /* Animations  */
 
 
-/* Safari 4.0 - 8.0 */
-
-@-webkit-keyframes slideUp {
-  0%{ transform: translateY(1000px); }
+@-webkit-keyframes slideRight {
+  0%{ transform: translateX(-900px); }
   100% { transform: translateY(0px);}
 }
 
-/* Standard syntax */
+
+@keyframes slideRight {
+  0% { transform: translateY(-900px); }
+  100% { transform: translateY(0px);}
+}
+
+@-webkit-keyframes slideUp {
+  0%{ transform: translateX(1000px); }
+  100% { transform: translateY(0px);}
+}
+
 
 @keyframes slideUp {
   0% { transform: translateY(1000px); }
   100% { transform: translateY(0px);}
 }
-
-
-/* Safari 4.0 - 8.0 */
 
 @-webkit-keyframes throwLogo {
   0%{ transform: translateX(1000px); }
@@ -659,7 +707,6 @@ tr:hover {background-color:#f5f5f5;}
   100% { transform: translateY(0px);}
 }
 
-/* Standard syntax */
 
 @keyframes throwLogo {
   0% { transform: translateX(1000px); }
@@ -674,7 +721,6 @@ tr:hover {background-color:#f5f5f5;}
   100% { opacity: 1; }
 }
 
-/* Standard syntax */
 
 @keyframes opacityLinks {
   0% { opacity: 0;}
