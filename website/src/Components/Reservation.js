@@ -7,7 +7,7 @@ class Reservation extends React.Component {
 
     state = {
         name: '',
-        reservations: false
+        reserved: false
     }
 
     handleChange = (e) => {
@@ -39,6 +39,7 @@ class Reservation extends React.Component {
         }
         console.log('Inside submit', formData)
         // this.props.postReservation(formData)
+        this.setState({ reserved: true })
     };
 
     handleClick = () => {
@@ -51,7 +52,7 @@ class Reservation extends React.Component {
 
         let name = this.state.name
 
-        return(<div>{this.state.reservations ? 
+        return(<div className="reservation-container">{this.state.reserved ? 
         <div>
             <h1>Thank you for reserving with us! See you soon, {this.capitalize(name)}</h1>
             <button onClick={this.handleClick}>Return</button>
@@ -59,6 +60,7 @@ class Reservation extends React.Component {
         :
         <div className="form-container">
             <h4>*Please contact us if your party is larger than 6</h4>
+            <a href="tel:1-321-312-4540">(321)-312-4540</a>
             <form onSubmit={this.handleSubmit} className="res-form">
                 <label>Date</label>
                 <input type="date" name="date"></input>
