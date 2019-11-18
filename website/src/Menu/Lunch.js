@@ -6,9 +6,6 @@ function Lunch() {
     return(<div className="menu-items">
         <div className="category-container">
             <div className="category-section">
-            <div className="category-header">
-                <h2>Tuesday-Friday 11:00 - 3:00</h2>
-            </div>
             <h3>Maki Rolls Served with Miso Soup and Salad 9.95</h3>
             <p>Aloha</p>
             <p>Gozilla</p>
