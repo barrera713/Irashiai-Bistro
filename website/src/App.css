@@ -153,15 +153,15 @@ body {
 
 
 .hours-header h3 {
-  font-size: 30px;
+  font-size: 42px;
   font-weight: 300;
+  letter-spacing: 2px;
 }
 
 .hours-header a {
   color: rgb(94, 94, 94);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 350;
-  padding: 20px;
 }
 
 
@@ -171,7 +171,11 @@ body {
 
 .hours-container li {
   list-style: none;
-  padding: 10px;
+  padding-top: 20px;
+}
+
+.hours {
+  padding-top: 20px;
 }
 
 .hours li {
@@ -209,6 +213,7 @@ body {
 
 .column {
  width: 25%;
+ background-color: #B71001;
 }
 
 .column img {
@@ -220,48 +225,11 @@ body {
 }
 
 
-
-
-
-/* .img-container {
-  background-color: rgba(0, 0, 0, 0.1);
-  width: 100%;
-  margin: 10px 0;
-  max-height: 600px;
-  overflow: auto;
-}
-
-
-.img-container ul {
-  margin: 0;
-  padding: 0;
-} 
-
-
-.img-container li {
-  list-style: none;
-}
-
-
-.img-container img {
-  width: 60%;
-  object-fit: cover;
-  margin: 10px 0;
-  box-shadow : 0px 10px 15px 0px rgba(0, 0, 0, 0.801);
-  margin-bottom: 10px;
-  opacity: .9;
-  transition-property: opacity;
-  transition-duration: 0.6s;
-}
-
-
-.img-container li img:hover {
-  opacity: 1;
-} */
-
-
-
 /* Image Carousel End  */
+
+
+
+
 
 
 
@@ -272,6 +240,12 @@ body {
   overflow: hidden;
 }
 
+.menu-log-container h3 {
+  font-size: 42px;
+  font-weight: 300;
+  padding: 35px;
+  letter-spacing: 10px;
+}
 
 .menu-log-container li {
   list-style: none;
@@ -283,7 +257,6 @@ body {
   padding: 5px;
 }
 
-
 .select-li:hover {
   cursor: pointer;
   color: #B71001;
@@ -291,6 +264,7 @@ body {
 
 .selected-category {
   height: 100%;
+  background-color: #EDEEC0;
 }
 
 
@@ -302,6 +276,7 @@ body {
   animation-duration: 1s;
   -webkit-animation-name: slideUp;
   -webkit-animation-duration: 1s;
+  padding: 30px 0;
 } 
 
 
@@ -334,6 +309,7 @@ body {
 
 .category-header {
   text-transform: uppercase;
+  text-decoration: underline;
   font-weight: 500;
   font-size: 24px;
   padding: 18px;
@@ -359,11 +335,10 @@ body {
   word-wrap: break-word;
 }
 
-.bar-cat{
+.bar-cat {
   display: inline-flex;
   flex-direction: column;
-  text-decoration: underline;
-  padding: 40px;
+  padding: 30px 0;
 }
 
 .bar-cat li {
@@ -423,6 +398,24 @@ body {
   word-wrap: break-word;
 }
 
+.beverage-container h3 {
+  font-weight: 430;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.beverage-container p {
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+.beer-container h3 {
+  padding: 15px 0;
+}
+
+.beer-container p {
+  padding: 2px 0;
+}
 
 /* Menu Section End  */
 
@@ -443,13 +436,11 @@ body {
 }
 
 
-.about-img h1 {
-  font-size: 38px;
+.about-img h3 {
+  font-size: 42px;
   font-weight: 300;
   padding: 30px;
-  letter-spacing: 18px;
-  font-family: 'Bebas Neue', cursive;
-  font-weight: 300;
+  letter-spacing: 10px;
 }
 
 .about-img img {
@@ -558,8 +549,6 @@ body {
 }
 
 /* Footer End  */
-
-
 
 
 
@@ -687,16 +676,7 @@ tr:hover {background-color:#f5f5f5;}
 
 @media screen and (max-width: 992px) {
 
-  /* .img-container {
-    height: auto;
-  }
-
-  .img-container li img {
-    width: 100%;
-    object-fit: cover;
-    opacity: .95;
-  } */
-
+  
   .category-section li {
     display: inline-block;
     width: 100%;
@@ -725,6 +705,8 @@ tr:hover {background-color:#f5f5f5;}
     display: flex;
   }
 
+  /* Image Section Start */
+
   .row {
     height: auto;
     margin: 0;
@@ -744,6 +726,8 @@ tr:hover {background-color:#f5f5f5;}
     margin: 2px 0;
     padding: 0;
   }
+
+  /* Image Section End */
 
   .about-img img {
     max-width: 100%;

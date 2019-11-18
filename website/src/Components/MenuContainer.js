@@ -94,6 +94,7 @@ export default class MenuContainer extends React.Component {
         return(<div>
             <div>
                 <div className="menu-log-container">
+                    <h3>Menu</h3>
                 <ul>
                     <li onClick={this.handleKitchen} className="select-li">Kitchen</li>
                     <li onClick={this.handleBar} className="select-li">Bar</li>

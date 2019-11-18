@@ -6,6 +6,9 @@ function Dessert() {
     return(<div className="menu-items">
         <div className="category-container">
             <div className="category-section">
+                <div className="category-header">
+                    <h2>Dessert</h2>
+                </div>
                 <h3>Cheesecake Tenpura</h3>
                 <p>6.95</p>
                 <h3>Banana Tenpura</h3>

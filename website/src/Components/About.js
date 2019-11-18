@@ -5,7 +5,7 @@ export default function About() {
 
     return(<div className="about-section">
         <div className="about-img">
-            <h1>Our Story</h1>
+            <h3>Our Story</h3>
             <img src='/mimi-kansan.jpg' alt=''/>
         </div>
         <div className="about-content">
