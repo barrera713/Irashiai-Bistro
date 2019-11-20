@@ -20,6 +20,10 @@ export default class MenuContainer extends React.Component {
         specialty: false
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
 
     handleDessert = (e) => {
         this.setState({

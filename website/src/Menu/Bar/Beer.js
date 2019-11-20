@@ -4,7 +4,7 @@ import React from 'react';
 function Beer() {
 
     return(<div className="menu-items">
-        <div className="beer-container">
+        <div className="bar-container">
             <div className="category-header">
                 <h2>Beer</h2>
             </div>

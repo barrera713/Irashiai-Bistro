@@ -14,11 +14,12 @@ import About from './Components/About';
 
 
 
-
 function App() {
+
+
   return (
     <div>
-    <Router history={history}>
+    <Router history={history} onUpdate={ () => window.scrollTo(0, 0)}>
       <NavBar />
       <PageLinks />
       <Switch>

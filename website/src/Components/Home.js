@@ -1,11 +1,41 @@
 import React from 'react';
 import MenuContainer from './MenuContainer';
 import About from './About';
+// import { Modal, Image, Button } from 'react-bootstrap';
 
 class Home extends React.Component {
 
+    // state = {
+    //     displayModal: false
+    // }
 
-    render() {
+    // openModal = () => {
+    //     this.setState({ displayModal: !this.state.displayModal });
+    //     console.log('modal is open: ', this.state.displayModal );
+    // }
+
+    // closeModal = () => {
+    //     this.setState({ displayModal: !this.state.displayModal });
+    //     console.log('modal is open: ', this.state.displayModal );
+    // }
+
+
+    render() { 
+            
+        // const modalStyle = {
+        //     position: 'absolute',
+        //     width: '100%',
+        //     height: '100%',
+        //     top: '0',
+        //     left: '0',
+        //     margin: '60% 0',
+        //     background: 'rgba(0, 0, 0, .5)'
+        // }
+
+        // const imgStyle = {
+        //     width: '900px',
+        //     height: 'auto',
+        // }
 
         return(
             <div className="main-container">
@@ -38,28 +68,28 @@ class Home extends React.Component {
                     </div>
                     <div className="row">   
                         <div className="column">
-                            <img src='/entree.jpg' alt=''></img>
+                        <img src='/entree.jpg' alt='' name="image1" onClick={this.openModal}></img>
                         </div>
                         <div className="column">
-                            <img src='/fish.jpg' alt=''></img>
+                            <img src='/fish.jpg' alt='' name="image2" ></img>
                         </div>
                         <div className="column">
-                            <img src='/roll-2.jpg' alt=''></img>
+                            <img src='/roll-2.jpg' alt='' name="image3"></img>
                         </div>
                         <div className="column">
-                            <img src='/roll-3.jpg' alt=''></img>
+                            <img src='/roll-3.jpg' alt='' name="image4"></img>
                         </div>
                         <div className="column">
-                            <img src='/img5.jpg' alt=''></img>
+                            <img src='/img5.jpg' alt='' name="image5"></img>
                         </div>
                         <div className="column">
-                            <img src='/steak-onions.jpg' alt=''></img>
+                            <img src='/steak-onions.jpg' alt='' name="image6"></img>
                         </div>
                         <div className="column">
-                            <img src='/img2.jpg' alt=''></img>
+                            <img src='/img2.jpg' alt='' name="image7"></img>
                         </div>
                         <div className="column">
-                            <img src='/img4.jpg' alt=''></img>
+                            <img src='/img4.jpg' alt='' name="image8"></img>
                         </div>
                     </div>
                 <MenuContainer />
@@ -67,7 +97,6 @@ class Home extends React.Component {
             </div>
         )
     }
-
 }
 
 export { Home }

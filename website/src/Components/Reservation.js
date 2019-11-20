@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { postReservation } from '../Actions/Reservation';
+import history  from '../history';
 
 
 class Reservation extends React.Component {
@@ -9,6 +10,12 @@ class Reservation extends React.Component {
         name: '',
         reserved: false
     }
+
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
+
 
     handleChange = (e) => {
         this.setState({ name: e.target.value })
@@ -43,7 +50,7 @@ class Reservation extends React.Component {
     };
 
     handleClick = () => {
-        window.location = '/'
+        history.push('/')
     };
     
 
