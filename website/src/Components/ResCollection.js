@@ -31,10 +31,15 @@ class ResCollection extends React.Component {
     
 
     render() {
-
         // console.log("inside date", this.state.selectedDate)
         const { reservations } = this.props;
         
+        // date function for datatable header
+       const tableHeader = new Date()
+       const header = tableHeader.toDateString()
+        
+
+
         let newDate = new Date()
         newDate.setDate(newDate.getDate() ) 
         let formatDate = newDate.toISOString().substr(0, 10)
@@ -59,13 +64,12 @@ class ResCollection extends React.Component {
         return (<div className="coll-main-wrapper">
             <div className="select-date-form">
                 <form onSubmit={ (e) => this.handleDate(e)}>
-                    <label>Date</label>
+                <label>{header}</label>
                     <input type="date" name="date" defaultValue={formatDate}></input>
                     <button type="submit">Search</button>
                 </form>
             </div>
             <div className="table-data-container">
-                <h3>Date Header</h3>
                 <table className="table-data">
                     <thead>
                         <tr>
