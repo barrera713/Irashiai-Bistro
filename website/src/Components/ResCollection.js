@@ -31,14 +31,14 @@ class ResCollection extends React.Component {
     
 
     render() {
+
         // console.log("inside date", this.state.selectedDate)
         const { reservations } = this.props;
         
         let newDate = new Date()
-        newDate.setDate(newDate.getDate() )
+        newDate.setDate(newDate.getDate() ) 
         let formatDate = newDate.toISOString().substr(0, 10)
         let today = date => date.includes(formatDate) 
-    
         
         let matchDate = date => date.includes(this.state.selectedDate)
         // if selected date matches props.date it returns that specific date
@@ -50,12 +50,13 @@ class ResCollection extends React.Component {
             }
         })
         
+
         console.log('this is reservations:', reservations)
         searchDate.sort( (a, b) => { return new Date(a.date + a.time) > new Date(b.date + b.time) ? 1 : -1 } )
         searchDate.sort( (a, b) => { return new Date(a.time) > new Date(b.time) })
 
        
-        return (<div >
+        return (<div className="coll-main-wrapper">
             <div className="select-date-form">
                 <form onSubmit={ (e) => this.handleDate(e)}>
                     <label>Date</label>
@@ -87,8 +88,7 @@ class ResCollection extends React.Component {
                     </tbody>
                 </table>
             </div>
-            </div>
-        )
+        </div>)
     }
 
 

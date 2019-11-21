@@ -57,6 +57,11 @@ class Reservation extends React.Component {
     
     render() {
 
+        let newDate = new Date()
+        newDate.setDate(newDate.getDate() ) 
+        let today = newDate.toISOString().substr(0, 10)
+      
+
         let name = this.state.name
 
         return(<div className="reservation-container">
@@ -74,13 +79,13 @@ class Reservation extends React.Component {
             :
             <form onSubmit={this.handleSubmit} className="res-form">
                 <label>Date</label>
-                <input type="date" name="date"></input>
+                <input type="date" name="date" defaultValue={today} min={today} required></input>
                 <label>First Name</label>
                 <input type="text" name="first-name" onChange={this.handleChange}></input>
                 <label>Last Name</label>
-                <input type="text" name="last-name"></input>
+                <input type="text" name="last-name" required></input>
                 <label>Phone Number</label>
-                <input type="tel" name="contact"></input>
+                <input type="tel" name="contact" required></input>
                 <label>Time</label>
                 <select name="time">
                     <option value="11:00am">11:00 am</option>
