@@ -59,15 +59,19 @@ class Reservation extends React.Component {
 
         let name = this.state.name
 
-        return(<div className="reservation-container">{this.state.reserved ? 
-        <div>
-            <h1>Thank you for reserving with us! See you soon, {this.capitalize(name)}</h1>
-            <button onClick={this.handleClick}>Return</button>
-        </div>
-        :
+        return(<div className="reservation-container">
         <div className="form-container">
-            <h4>*Please contact us if your party is larger than 6</h4>
-            <a href="tel:1-321-312-4540">(321)-312-4540</a>
+            <h2>Reservation</h2>
+            <p>*Please contact us if your party is larger than 6</p>
+            <div className="form-contact">
+                <a href="tel:1-321-312-4540">(321)-312-4540</a>
+            </div>
+            {this.state.reserved ? 
+            <div className="after-submit">
+                <h1>Thank you for reserving with us! See you soon, {this.capitalize(name)}</h1>
+                <button onClick={this.handleClick}>Home</button>
+            </div>
+            :
             <form onSubmit={this.handleSubmit} className="res-form">
                 <label>Date</label>
                 <input type="date" name="date"></input>
@@ -103,7 +107,8 @@ class Reservation extends React.Component {
                 <button type="submit">Submit</button>
                 </div>
             </form>
-        </div> }
+            }
+        </div> 
         </div>)
     }
 
