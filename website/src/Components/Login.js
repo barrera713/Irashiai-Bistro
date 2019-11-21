@@ -33,26 +33,25 @@ class Login extends React.Component {
     render() {
 
         return(<div>
-            <form onSubmit={this.adminSubmit} className="login-form">
-                <h3>Admin Login</h3>
-                <input placeholder="Username" type="text" name="admin-name" />
-                <input placeholder="Password" type="password" name="admin-password" />
-                <div>
-                    <button>Confirm</button>
-                </div>
-            </form>
-            <div>
-                <form onSubmit={this.userSubmit} className="login-form" >
-                    <h3>User Login</h3>
-                    <input placeholder="Username" type="text" name="name" />
-                    <input placeholder="Password" type="password" name="password" />
-                    <div>
+            <div className="forms-wrapper">
+                <div className="admin-form-container">
+                    <form onSubmit={this.adminSubmit} className="login-form">
+                        <h3>Admin Login</h3>
+                        <input placeholder="Username" type="text" name="admin-name" />
+                        <input placeholder="Password" type="password" name="admin-password" />
                         <button>Confirm</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
+                <div className="partner-form-container">
+                    <form onSubmit={this.userSubmit} className="login-form" >
+                        <h3>User Login</h3>
+                        <input placeholder="Username" type="text" name="name" />
+                        <input placeholder="Password" type="password" name="password" />
+                        <button>Confirm</button>
+                    </form>
+                </div>
             </div>
-        </div>
-        )
+        </div>)
 
     }
 }

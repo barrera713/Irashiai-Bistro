@@ -679,17 +679,56 @@ body {
 
 
 
-
 /* Reservation Form End  */
 
 
-.login-form input {
+
+
+
+/* Partner and Admin Forms Start  */
+
+.forms-wrapper {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10% 0;
+}
+
+.admin-form-container {
+  padding: 50px;
+  width: 50vh;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 8px 5px 3px 0px rgba(0, 0, 0, 0.3);
+  background: #B71001;
+}
+
+
+.partner-form-container {
+  background: #E8E8E8;
+  padding: 50px;
+  width: 50vh;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 8px 5px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.login-form label, input {
   width: 100%;
-  height: 25px;
-} 
+  margin: 5px 0;
+  padding: 10px 0;
+}
+
+/* Partner and Admin Forms End  */
 
 
-/* Reservations Page */
+
+
+
+/* Reservations Page Start */
 
 .select-date-form {
   margin: 25px;
@@ -717,6 +756,7 @@ body {
   padding: 8px;
 }
 
+/* Reservation Page End  */
 
 
 tr:hover {background-color:#f5f5f5;}
