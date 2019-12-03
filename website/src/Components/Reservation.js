@@ -57,10 +57,22 @@ class Reservation extends React.Component {
     
     render() {
 
+        const twoHoursBefore = new Date();
+        twoHoursBefore.setHours(twoHoursBefore.getHours() - 2);
+        console.log('twoHoursBefore', twoHoursBefore);
+        
+        // twoHoursBefore.setDate(twoHoursBefore.getDate())
+        // let newDate = twoHoursBefore.toISOString().substr(0, 10)
+        // console.log('newDate', newDate)
+        // let newHours = twoHoursBefore.toISOString().substr(0, 10)
+        // console.log('newHours', newHours)
+
         let newDate = new Date()
-        newDate.setDate(newDate.getDate() ) 
-        let today = newDate.toISOString().substr(0, 10)
-      
+        newDate.setHours(newDate.getHours() - 2);
+        newDate.setDate(newDate.getDate());
+        let today = newDate.toISOString().substr(0, 10);
+        
+
 
         let name = this.state.name
 
@@ -79,7 +91,7 @@ class Reservation extends React.Component {
             :
             <form onSubmit={this.handleSubmit} className="res-form">
                 <label>Date</label>
-                <input type="date" name="date" defaultValue={today} min={today} required></input>
+                <input type="date" name="date" defaultValue={twoHoursBefore} min={today} required></input>
                 <label>First Name</label>
                 <input type="text" name="first-name" onChange={this.handleChange}></input>
                 <label>Last Name</label>

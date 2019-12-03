@@ -62,9 +62,9 @@ class ResCollection extends React.Component {
 
        
         return (<div className="coll-main-wrapper">
-            <div className="select-date-form">
-                <form onSubmit={ (e) => this.handleDate(e)}>
-                <label>{header}</label>
+            <div>
+                <form onSubmit={ (e) => this.handleDate(e)} className="select-date-form">
+                <label className="table-header">{header}</label>
                     <input type="date" name="date" defaultValue={formatDate}></input>
                     <button type="submit">Search</button>
                 </form>
@@ -80,7 +80,7 @@ class ResCollection extends React.Component {
                             <th>Party Size</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="table-body">
                     {searchDate.map(i => 
                     <tr onClick={ () => this.handleClick(i._id)} key={i._id}> 
                         <td>{i.guest.name}</td>
