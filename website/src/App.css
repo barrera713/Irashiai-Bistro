@@ -432,9 +432,8 @@ body {
 
 .about-section {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-
+  justify-content: space-between;
+  padding: 50px;
   -webkit-animation-name: slideUp;
   -webkit-duration: 1s;
   animation-name: slideUp;
@@ -442,22 +441,28 @@ body {
 }
 
 
-.about-img h3 {
+.our-story {
   font-size: 42px;
   font-weight: 300;
-  padding: 30px;
-  letter-spacing: 10px;
+  padding: 50px 0;
+  letter-spacing: 8px;
 }
 
+.about-img {
+  flex: 2;
+  padding: 50px;
+}
+
+
+
 .about-img img {
-  max-width: 450px;
+  max-width: 400px;
   height: auto;
   box-shadow : 0px 10px 15px 0px rgba(0, 0, 0, 0.801);
 }
 
 .about-content {
-  width: 70%;
-  margin-top: 20px;
+  max-width: 600px;
   padding: 50px;
   font-size: 16px;
   letter-spacing: 1px;
@@ -465,15 +470,16 @@ body {
 
 .about-content p {
   font-size: 16px;
+  line-height: 35px;
   letter-spacing: 2px;
 }
 
 
 
 
-
-
 /* About section end */
+
+
 
 
 
