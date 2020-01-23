@@ -10,7 +10,7 @@ router.post('/reserve', async (req, res) => {
     if(error) return res.status(400).send(error);
     
     const resAlreadyExist = await Reservation.findOne({ date: req.body.date, time: req.body.time });
-    if(resAlreadyExist) return res.status(400).send({ error: 'Reservation has already been taken'});
+    if(resAlreadyExist) return res.status(400).send({ error: 'A reservation has already been made for this time.'});
 
     const newReservation = new Reservation({
         date: req.body.date,

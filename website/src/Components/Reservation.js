@@ -46,7 +46,12 @@ class Reservation extends React.Component {
         }
         console.log('Inside submit', formData)
         // this.props.postReservation(formData)
-        this.setState({ reserved: true })
+        this.setState({ reserved: true });
+        let name = this.capitalize(this.state.name);
+        if(name.length > 0) {
+            window.alert(`Thank you your reservation. See you soon, ${name}!`)
+        }
+        history.push('/')
     };
 
     handleClick = () => {
@@ -72,10 +77,6 @@ class Reservation extends React.Component {
         newDate.setDate(newDate.getDate());
         let today = newDate.toISOString().substr(0, 10);
         
-
-
-        let name = this.state.name
-
         return(<div className="reservation-container">
         <div className="form-container">
             <h2>Reservation</h2>
@@ -83,12 +84,6 @@ class Reservation extends React.Component {
             <div className="form-contact">
                 <a href="tel:1-321-312-4540">(321)-312-4540</a>
             </div>
-            {this.state.reserved ? 
-            <div className="after-submit">
-                <h1>Thank you for reserving with us! See you soon, {this.capitalize(name)}</h1>
-                <button onClick={this.handleClick}>Home</button>
-            </div>
-            :
             <form onSubmit={this.handleSubmit} className="res-form">
                 <label>Date</label>
                 <input type="date" name="date" defaultValue={twoHoursBefore} min={today} required></input>
@@ -124,7 +119,6 @@ class Reservation extends React.Component {
                 <button type="submit">Submit</button>
                 </div>
             </form>
-            }
         </div> 
         </div>)
     }
