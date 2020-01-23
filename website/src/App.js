@@ -23,12 +23,12 @@ function App() {
       <NavBar />
       <PageLinks />
       <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/reserve' component={Reservation} />
-        <Route exact path='/login' component={Login} />
-        <Route exact path='/reservations' component={ResCollection} />
-        <Route exact path='/menu' component={MenuContainer} />
-        <Route exact path='/about' component={About} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/reserve" component={Reservation} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/reservations" component={ResCollection} />
+        <Route exact path="/menu" component={MenuContainer} />
+        <Route exact path="/about" component={About} />
       </Switch>
       <Footer />
     </Router>
