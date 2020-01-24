@@ -4,7 +4,7 @@ import history from '../history';
 
 export const postReservation = (formData) => dispatch => {
     console.log('in Reservation action');
-    fetch('http://localhost:5000/reserve', {
+    fetch('/reserve', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -29,7 +29,7 @@ export const postReservation = (formData) => dispatch => {
 };
 
 export const fetchReservations = () => dispatch => {
-    fetch('http://localhost:5000/reservations', {
+    fetch('/reservations', {
         method: 'GET',
         headers: {
             'Content-type': 'application/json',
@@ -44,9 +44,9 @@ export const fetchReservations = () => dispatch => {
                 payload: reservations
             })
             )
+            .then(!sessionStorage.token ? history.push('/login') : null)
         } 
         // redirects if token is not present. Will not render data if token is not a valid token from server 
-        if(!sessionStorage.token ? history.push('/login') : null );
     })
 };
 

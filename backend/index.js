@@ -7,6 +7,7 @@ const adminRoute = require('./routes/admin');
 const partnerRoute = require('./routes/partner');
 const resRoute = require('./routes/reservation');
 const cors = require('cors');
+const path = require('path');
 
 
 
@@ -24,6 +25,12 @@ mongoose.connect(process.env.DB_CONNECT,
 
 // Middlewares 
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 // Route Middlewares
 app.use('/admin', adminRoute);

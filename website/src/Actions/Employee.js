@@ -2,7 +2,7 @@ import { CURRENT_EMPLOYEE } from './types';
 // import history from '../history';
 
 export const employeeLogin = (formData) => dispatch => {
-    fetch('http://localhost:5000/partner/login', {
+    fetch('/partner/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

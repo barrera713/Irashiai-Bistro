@@ -45,7 +45,7 @@ class Reservation extends React.Component {
            }
         }
         console.log('Inside submit', formData)
-        // this.props.postReservation(formData)
+        this.props.postReservation(formData)
         this.setState({ reserved: true });
         let name = this.capitalize(this.state.name);
         if(name.length > 0) {

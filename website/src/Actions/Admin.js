@@ -1,7 +1,7 @@
 import { ADMIN } from './types';
 
 export const adminLogin = (formData) => dispatch => {
-    fetch('http://localhost:5000/admin/login', {
+    fetch('/admin/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
