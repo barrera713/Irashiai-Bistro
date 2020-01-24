@@ -26,10 +26,11 @@ mongoose.connect(process.env.DB_CONNECT,
 // Middlewares 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, 'build')));
-
+if(process.env.NODE_ENV === 'staging') {
+    app.use(express.static(path.join(__dirname, '../website/build')));
+}
 app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, '../website/build', 'index.html'));
 });
 
 // Route Middlewares
@@ -37,6 +38,7 @@ app.use('/admin', adminRoute);
 app.use('/', testingRoute);
 app.use('/', resRoute);
 app.use('/partner', partnerRoute);
+
 
 
 const PORT = process.env.PORT || 5000;
