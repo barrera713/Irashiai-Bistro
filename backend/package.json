@@ -10,7 +10,7 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "dev": "concurrently \"npm run server\" \"npm run website\"",
-    "website": "cd ../website && npm run build"
+    "heroku-postbuild": "cd website && npm run build"
   },
   "repository": {
     "type": "git",
