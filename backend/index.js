@@ -26,16 +26,15 @@ mongoose.connect(process.env.DB_CONNECT,
 // Middlewares 
 app.use(express.json());
 
-if(process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, 'website/build')));
-}
-app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/website/build/index.html'));
-});
+// if(process.env.NODE_ENV === 'production') {
+//     app.use(express.static(path.join(__dirname, 'website/build')));
+// }
+// app.get('/*', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../website/build/index.html'));
+// });
 
 // Route Middlewares
 app.use('/admin', adminRoute);
-app.use('/', testingRoute);
 app.use('/', resRoute);
 app.use('/partner', partnerRoute);
 

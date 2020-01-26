@@ -8,9 +8,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "server": "nodemon index.js",
-    "dev": "concurrently \"npm run server\" \"npm run website\"",
-    "heroku-postbuild": "cd website && npm run build"
+    "server": "nodemon index.js"
   },
   "repository": {
     "type": "git",
