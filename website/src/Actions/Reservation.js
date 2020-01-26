@@ -4,7 +4,7 @@ import history from '../history';
 
 export const postReservation = (formData) => dispatch => {
     console.log('in Reservation action');
-    fetch('/reserve', {
+    fetch('/reservation/new', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -29,7 +29,7 @@ export const postReservation = (formData) => dispatch => {
 };
 
 export const fetchReservations = () => dispatch => {
-    fetch('/reservations', {
+    fetch('/reservation/all-data', {
         method: 'GET',
         headers: {
             'Content-type': 'application/json',

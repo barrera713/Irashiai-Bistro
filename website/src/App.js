@@ -12,8 +12,6 @@ import ResCollection from './Components/ResCollection';
 import MenuContainer from './Components/MenuContainer';
 import About from './Components/About';
 
-
-
 function App() {
 
 

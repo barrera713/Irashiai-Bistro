@@ -4,7 +4,7 @@ const { resValidation } = require('../validations');
 const { partnerAuth } = require('./varifyToken');
 
 // Create reservation
-router.post('/reserve', async (req, res) => {
+router.post('/new', async (req, res) => {
     // Validate input data
     const { error } = resValidation(req.body);
     if(error) return res.status(400).send(error);
@@ -34,7 +34,7 @@ router.post('/reserve', async (req, res) => {
 
 
 // Get all reservations
-router.get('/reservations', partnerAuth, async (req, res) => {
+router.get('/all-data', partnerAuth, async (req, res) => {
     try{
         const properties = await Reservation.find();
         res.json(properties);

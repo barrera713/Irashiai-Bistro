@@ -2,12 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 // Import Routes
-const testingRoute = require('./routes/testing');
 const adminRoute = require('./routes/admin');
 const partnerRoute = require('./routes/partner');
 const resRoute = require('./routes/reservation');
 const cors = require('cors');
 const path = require('path');
+
 
 
 
@@ -35,7 +35,7 @@ app.use(express.json());
 
 // Route Middlewares
 app.use('/admin', adminRoute);
-app.use('/', resRoute);
+app.use('/reservation', resRoute);
 app.use('/partner', partnerRoute);
 
 const PORT = process.env.PORT || 5000;

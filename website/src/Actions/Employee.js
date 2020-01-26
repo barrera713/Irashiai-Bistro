@@ -1,8 +1,11 @@
 import { CURRENT_EMPLOYEE } from './types';
 // import history from '../history';
+const API = "https://murmuring-cliffs-02061.herokuapp.com/";
+
+
 
 export const employeeLogin = (formData) => dispatch => {
-    fetch('/partner/login', {
+    fetch(`${API}/partner/login`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
