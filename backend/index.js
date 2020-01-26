@@ -26,11 +26,11 @@ mongoose.connect(process.env.DB_CONNECT,
 // Middlewares 
 app.use(express.json());
 
-if(process.env.NODE_ENV === 'staging') {
-    app.use(express.static(path.join(__dirname, '../website/build')));
+if(process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, 'website/build')));
 }
 app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../website/build', 'index.html'));
+    res.sendFile(path.join(__dirname, '/website/build/index.html'));
 });
 
 // Route Middlewares

@@ -7,9 +7,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "server": "nodemon index.js",
-    "website": "node start-website.js"
+    "dev": "concurrently \"npm run server\" \"npm run website\"",
+    "website": "cd ../website && npm run build"
   },
   "repository": {
     "type": "git",
