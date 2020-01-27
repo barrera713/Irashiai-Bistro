@@ -1,27 +1,39 @@
+const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+dotenv.config();
+const app = express();
+const cors = require('cors');
+app.use(cors());
+
+// app.use((req, res, next) => {
+//     res.setHeader('Access-Control-Allow-Origin', '*')
+//     next();
+// });
+
+// app.use(cors()) = (req, res, next) => {
+//     res.header("Access-Control-Allow-Origin", "https://irashiaibistro.netlify.com"); 
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// };
+
+
+
 // Import Routes
 const adminRoute = require('./routes/admin');
 const partnerRoute = require('./routes/partner');
 const resRoute = require('./routes/reservation');
-const cors = require('cors');
-const path = require('path');
 
 
-
-
-
-dotenv.config();
-
-const app = express();
 
 // Connect to DB
-app.use(cors());
 mongoose.connect(process.env.DB_CONNECT,
 { useNewUrlParser: true, useUnifiedTopology: true }, () => {
     console.log('Connected to db.. .')
 });
+
+
 
 // Middlewares 
 app.use(express.json());
@@ -33,10 +45,19 @@ app.use(express.json());
 //     res.sendFile(path.join(__dirname, '../website/build/index.html'));
 // });
 
+
+// Testing for deployment
+app.get('/', (req, res) => {
+    res.send(JSON.stringify({ Hello: 'World'}));
+});
+
+
+
 // Route Middlewares
 app.use('/admin', adminRoute);
 app.use('/reservation', resRoute);
-app.use('/partner', partnerRoute);
+app.use('/employee', partnerRoute);
+
 
 const PORT = process.env.PORT || 5000;
 

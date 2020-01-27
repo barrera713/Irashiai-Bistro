@@ -1,10 +1,11 @@
 import { NEW_RESERVATION, FETCHED } from './types';
 import history from '../history';
+const API = "https://murmuring-cliffs-02061.herokuapp.com";
 
 
 export const postReservation = (formData) => dispatch => {
     console.log('in Reservation action');
-    fetch('/reservation/new', {
+    fetch(`${API}/reservation/new`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -29,7 +30,7 @@ export const postReservation = (formData) => dispatch => {
 };
 
 export const fetchReservations = () => dispatch => {
-    fetch('/reservation/all-data', {
+    fetch(`${API}/reservation/all-data`, {
         method: 'GET',
         headers: {
             'Content-type': 'application/json',
