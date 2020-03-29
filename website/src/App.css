@@ -96,7 +96,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 1;
-  box-shadow : 0px 10px 15px 0px rgba(0,0,0,0.75);
 }
 
 
@@ -579,37 +578,24 @@ body {
 
 
 .form-container {
-  background-color: #ffffff;
   justify-content: center;
   margin-top: 20px;
-  /* -webkit-animation-name: slideUp;
-  -webkit-duration: 1s;
-  animation-name: slideUp;
-  animation-duration: 1s; */
-  /* overflow: hidden; */
-  padding: 30px;
+  padding: 0;
   width: 465px;
-  height: 700px;
   margin: 10px auto;
-  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.7);
   border-radius: 10px;
 }
 
 .form-container h2 {
   font-size: 24px;
-  letter-spacing: 1.5px;
-  font-weight: 900;
-  padding-top: 2px;
-  color: #ffffff;
+  letter-spacing: .5px;
+  font-weight: 500;
+  color: black;
 }
 
 
 .form-container p {
   font-size: 14px;
-}
-
-.form-contact {
-  padding-bottom: 5px;
 }
 
 .form-contact a {
@@ -619,38 +605,43 @@ body {
 }
 
 .form-contact a:hover {
-  color: rgb(192, 185, 185);
+  text-decoration: underline;
 }
 
 .res-form {
-  padding: 10px 0;
-  height: 350px;
+  padding: 30px;
   width: 100%;
-  background-color: #ffffff;
   margin: 10px 0;
 }
 
 .res-form label {
   width: 100%;
-  height: 25x;
+  text-align: left;
+  padding: 0;
+  margin: 0;
 }
 
 .res-form input, select {
-  background-color: rgba(144, 165, 187, 0.212);
-  padding: 10px 0;
+  background-color: rgba(214, 221, 230, 0.562);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 15px 0;
   margin: 10px 0;
   width: 100%;
-  height: 25px;
 }
 
+.form-selector {
+  width: 25%;
+  margin-right: 100%;
+}
 
 .res-form button {
   color: white;
   background-color: #B71001;
   transition: ease-in-out .3s;
-  margin: 10px 0;
-  width: 50%;
+  width: 80%;
   padding: 10px 0;
+  margin-top: 20px;
   border-radius: 10px;
 }
 
@@ -663,10 +654,6 @@ body {
   height: 150px;
   background: #ffffff;
   margin: 0 auto;
-  /* -webkit-animation-name: slideRight;
-  -webkit-animation-duration: 1s;
-  animation-name: slideRight;
-  animation-duration: 1s; */
 }
 
 .after-submit h1 {
@@ -930,6 +917,12 @@ tr:hover {background-color:#f5f5f5;}
     margin: 50px auto;
   }
 
+  .res-form label {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+
   .res-form input, select {
     background-color: rgba(144, 165, 187, 0.212);
     margin: 10px auto;
@@ -939,10 +932,17 @@ tr:hover {background-color:#f5f5f5;}
 
   .res-form button, .after-submit button {
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 14px;
-    width: 65%;
-    margin: 5px 0;
+    width: 90%;
+    margin-top: 25px;
+    margin-bottom: 0;
+  }
+
+  .form-selector {
+    width: 30%; 
+    padding: 3px 0;
+    margin-right: 100%;
   }
 
   /* Reservation Form End  */

@@ -44,7 +44,7 @@ class Reservation extends React.Component {
                "contact": e.target["contact"].value
            }
         }
-        console.log('Inside submit', formData)
+        // console.log('Inside submit', formData)
         this.props.postReservation(formData)
         this.setState({ reserved: true });
         let name = this.capitalize(this.state.name);
@@ -79,8 +79,8 @@ class Reservation extends React.Component {
         
         return(<div className="reservation-container">
         <div className="form-container">
-            <h2>Reservation</h2>
-            <p>*Please contact us if your party is larger than 6</p>
+            <h2>Book a Reservation</h2>
+            <p>*Please contact us if your party is larger than 6.</p>
             <div className="form-contact">
                 <a href="tel:1-321-312-4540">(321)-312-4540</a>
             </div>
@@ -94,7 +94,7 @@ class Reservation extends React.Component {
                 <label>Phone Number</label>
                 <input type="tel" name="contact" required></input>
                 <label>Time</label>
-                <select name="time">
+                <select name="time" className="form-selector">
                     <option value="11:00am">11:00 am</option>
                     <option value="12:00pm">12:00 pm</option>
                     <option value="01:00pm">1:00 pm</option>
@@ -107,7 +107,7 @@ class Reservation extends React.Component {
                     <option value="08:00pm">8:00 pm</option>
                 </select>
                 <label>Party Size</label>
-                <select name="count">
+                <select name="count" className="form-selector">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -116,7 +116,7 @@ class Reservation extends React.Component {
                     <option value="6">6</option>
                 </select>
                 <div>
-                <button type="submit">Submit</button>
+                <button type="submit">Reserve</button>
                 </div>
             </form>
         </div> 

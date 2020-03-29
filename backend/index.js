@@ -7,17 +7,6 @@ const app = express();
 const cors = require('cors');
 app.use(cors());
 
-// app.use((req, res, next) => {
-//     res.setHeader('Access-Control-Allow-Origin', '*')
-//     next();
-// });
-
-// app.use(cors()) = (req, res, next) => {
-//     res.header("Access-Control-Allow-Origin", "https://irashiaibistro.netlify.com"); 
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//     next();
-// };
-
 
 
 // Import Routes
@@ -47,9 +36,9 @@ app.use(express.json());
 
 
 // Testing for deployment
-app.get('/', (req, res) => {
-    res.send(JSON.stringify({ Hello: 'World'}));
-});
+// app.get('/', (req, res) => {
+//     res.send(JSON.stringify({ Hello: 'World'}));
+// });
 
 
 

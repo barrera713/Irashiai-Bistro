@@ -56,7 +56,7 @@ class ResCollection extends React.Component {
         })
         
 
-        console.log('this is reservations:', reservations)
+        // console.log('this is reservations:', reservations)
         searchDate.sort( (a, b) => { return new Date(a.date + a.time) > new Date(b.date + b.time) ? 1 : -1 } )
         searchDate.sort( (a, b) => { return new Date(a.time) > new Date(b.time) })
 
