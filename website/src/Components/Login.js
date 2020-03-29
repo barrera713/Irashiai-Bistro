@@ -34,17 +34,9 @@ class Login extends React.Component {
 
         return(<div>
             <div className="forms-wrapper">
-                {/* <div className="admin-form-container">
-                    <form onSubmit={this.adminSubmit} className="login-form">
-                        <h3>Admin Login</h3>
-                        <input placeholder="Username" type="text" name="admin-name" />
-                        <input placeholder="Password" type="password" name="admin-password" />
-                        <button>Confirm</button>
-                    </form>
-                </div> */}
                 <div className="partner-form-container">
                     <form onSubmit={this.userSubmit} className="login-form" >
-                        <h3>User Login</h3>
+                        <h3>Partner Login</h3>
                         <input placeholder="Carlos Barrera" type="text" name="name" />
                         <input placeholder="123123" type="password" name="password" />
                         <button>Confirm</button>
