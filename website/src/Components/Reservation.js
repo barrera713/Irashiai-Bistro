@@ -49,7 +49,7 @@ class Reservation extends React.Component {
         this.setState({ reserved: true });
         let name = this.capitalize(this.state.name);
         if(name.length > 0) {
-            window.alert(`Thank you your reservation. See you soon, ${name}!`)
+            window.alert(`Thank you for your reservering with us! See you soon, ${name}!`)
         }
         history.push('/')
     };
