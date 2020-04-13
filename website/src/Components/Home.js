@@ -5,37 +5,8 @@ import About from './About';
 
 class Home extends React.Component {
 
-    // state = {
-    //     displayModal: false
-    // }
-
-    // openModal = () => {
-    //     this.setState({ displayModal: !this.state.displayModal });
-    //     console.log('modal is open: ', this.state.displayModal );
-    // }
-
-    // closeModal = () => {
-    //     this.setState({ displayModal: !this.state.displayModal });
-    //     console.log('modal is open: ', this.state.displayModal );
-    // }
-
 
     render() { 
-            
-        // const modalStyle = {
-        //     position: 'absolute',
-        //     width: '100%',
-        //     height: '100%',
-        //     top: '0',
-        //     left: '0',
-        //     margin: '60% 0',
-        //     background: 'rgba(0, 0, 0, .5)'
-        // }
-
-        // const imgStyle = {
-        //     width: '900px',
-        //     height: 'auto',
-        // }
 
         return(
             <div className="main-container">
@@ -92,8 +63,8 @@ class Home extends React.Component {
                             <img src='/img4.jpg' alt='' name="image8"></img>
                         </div>
                     </div>
-                <MenuContainer />
-                <About />
+                {/* <MenuContainer />
+                <About /> */}
             </div>
         )
     }

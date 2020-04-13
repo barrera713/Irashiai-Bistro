@@ -10,7 +10,7 @@ function Footer() {
                 </li>
                     <a href="https://www.yelp.com/biz/irashiai-2-japanese-bistro-palm-bay" className="fa fa-yelp"> </a>
                 <li>
-                    <a href="mailto: irashiaibistro@gmail.com" className="fa fa-envelope"> </a>
+                    <a href="mailto: irashiai2bistro@gmail.com" className="fa fa-envelope"> </a>
                 </li>
             </ul>
         </div>
