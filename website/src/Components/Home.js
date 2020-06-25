@@ -63,8 +63,8 @@ class Home extends React.Component {
                             <img src='/img4.jpg' alt='' name="image8"></img>
                         </div>
                     </div>
-                {/* <MenuContainer />
-                <About /> */}
+                {/* <MenuContainer /> */}
+                <About />
             </div>
         )
     }
